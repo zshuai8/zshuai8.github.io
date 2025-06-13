@@ -2,7 +2,7 @@
 layout: about
 title: About Me
 permalink: /
-subtitle: <a href='#'>Virginia Tech - Computer Science</a>. 
+subtitle: <a href='#'>Virginia Tech - Computer Science</a>.
 
 profile:
   align: right
@@ -32,8 +32,9 @@ latest_posts:
 Hi there, I am a final-year PhD student in the Department of Computer Science at Virginia Tech, fortunately advised by Dr. Dawei Zhou. My research is centered on **graph learning and its applications**, with a strong emphasis on real-world problems such as AI for finance and predictive maintenance.
 
 🔍 **Research Focus**
-- **Graph representation learning**, exploring expressive and scalable models for complex graph data  
-- **Graph neural networks (GNNs)** for heterogeneous and heterophilous graphs   
+
+- **Graph representation learning**, exploring expressive and scalable models for complex graph data
+- **Graph neural networks (GNNs)** for heterogeneous and heterophilous graphs
 - **Graph-augmented foundation models**, investigation into LLMs enhanced with graph structure.
 - Applications in **AI for Finance** and **predictive maintenance**, grounding theoretical advances in impactful domains.
 

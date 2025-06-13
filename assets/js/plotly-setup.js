@@ -2,22 +2,22 @@ let plotlyTheme = determineComputedTheme();
 /* Create plotly chart as another node and hide the code block, appending the plotly node after it
        this is done to enable retrieving the code again when changing theme between light/dark */
 document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
-        document.querySelectorAll("pre>code.language-plotly").forEach((elem) => {
-            const jsonCode = elem.textContent;
-            const backup = elem.parentElement;
-            backup.classList.add("unloaded");
-            /* create plotly node */
-            let chartElement = document.createElement("div");
-            backup.after(chartElement);
+  if (document.readyState === "complete") {
+    document.querySelectorAll("pre>code.language-plotly").forEach((elem) => {
+      const jsonCode = elem.textContent;
+      const backup = elem.parentElement;
+      backup.classList.add("unloaded");
+      /* create plotly node */
+      let chartElement = document.createElement("div");
+      backup.after(chartElement);
 
-            /* create plotly */
-            var jsonData = JSON.parse(jsonCode);
+      /* create plotly */
+      var jsonData = JSON.parse(jsonCode);
 
-            if (plotlyTheme === "dark") {
-                // dark theme extracted from https://github.com/plotly/plotly.py/blob/main/plotly/package_data/templates/plotly_dark.json?raw=true
-                // prettier-ignore
-                const plotlyDarkLayout = { "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#f2f5fa" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "rgb(17,17,17)", "plot_bgcolor": "rgb(17,17,17)", "polar": { "bgcolor": "rgb(17,17,17)", "angularaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "radialaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" } }, "ternary": { "bgcolor": "rgb(17,17,17)", "aaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "baxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "caxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [
+      if (plotlyTheme === "dark") {
+        // dark theme extracted from https://github.com/plotly/plotly.py/blob/main/plotly/package_data/templates/plotly_dark.json?raw=true
+        // prettier-ignore
+        const plotlyDarkLayout = { "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#f2f5fa" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "rgb(17,17,17)", "plot_bgcolor": "rgb(17,17,17)", "polar": { "bgcolor": "rgb(17,17,17)", "angularaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "radialaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" } }, "ternary": { "bgcolor": "rgb(17,17,17)", "aaxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "baxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" }, "caxis": { "gridcolor": "#506784", "linecolor": "#506784", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [
                                 [0.0, "#0d0887"],
                                 [0.1111111111111111, "#46039f"],
                                 [0.2222222222222222, "#7201a8"],
@@ -108,20 +108,20 @@ document.addEventListener("readystatechange", () => {
                                 [1.0, "#f0f921"]
                             ] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "marker": { "line": { "color": "#283442" } }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#f2f5fa" }, "error_y": { "color": "#f2f5fa" }, "marker": { "line": { "color": "rgb(17,17,17)", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "marker": { "line": { "color": "#283442" } }, "type": "scattergl" }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermap": [{ "type": "scattermap", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#A2B1C6", "gridcolor": "#506784", "linecolor": "#506784", "minorgridcolor": "#506784", "startlinecolor": "#A2B1C6" }, "baxis": { "endlinecolor": "#A2B1C6", "gridcolor": "#506784", "linecolor": "#506784", "minorgridcolor": "#506784", "startlinecolor": "#A2B1C6" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#506784" }, "line": { "color": "rgb(17,17,17)" } }, "header": { "fill": { "color": "#2a3f5f" }, "line": { "color": "rgb(17,17,17)" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "rgb(17,17,17)", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] } };
 
-                // if jsonData.layout exists, then update the theme
-                if (jsonData.layout) {
-                    if (jsonData.layout.template) {
-                        jsonData.layout.template = Object.assign({}, plotlyDarkLayout, jsonData.layout.template);
-                    } else {
-                        jsonData.layout.template = plotlyDarkLayout;
-                    }
-                } else {
-                    jsonData.layout = { template: plotlyDarkLayout };
-                }
-            } else {
-                // light theme extracted from https://github.com/plotly/plotly.py/blob/main/plotly/package_data/templates/plotly_white.json?raw=true
-                // prettier-ignore
-                const plotlyLightLayout = { "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": { "bgcolor": "white", "angularaxis": { "gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": "" }, "radialaxis": { "gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": "" } }, "ternary": { "bgcolor": "white", "aaxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" }, "baxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" }, "caxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [
+        // if jsonData.layout exists, then update the theme
+        if (jsonData.layout) {
+          if (jsonData.layout.template) {
+            jsonData.layout.template = Object.assign({}, plotlyDarkLayout, jsonData.layout.template);
+          } else {
+            jsonData.layout.template = plotlyDarkLayout;
+          }
+        } else {
+          jsonData.layout = { template: plotlyDarkLayout };
+        }
+      } else {
+        // light theme extracted from https://github.com/plotly/plotly.py/blob/main/plotly/package_data/templates/plotly_white.json?raw=true
+        // prettier-ignore
+        const plotlyLightLayout = { "layout": { "autotypenumbers": "strict", "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": { "color": "#2a3f5f" }, "hovermode": "closest", "hoverlabel": { "align": "left" }, "paper_bgcolor": "white", "plot_bgcolor": "white", "polar": { "bgcolor": "white", "angularaxis": { "gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": "" }, "radialaxis": { "gridcolor": "#EBF0F8", "linecolor": "#EBF0F8", "ticks": "" } }, "ternary": { "bgcolor": "white", "aaxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" }, "baxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" }, "caxis": { "gridcolor": "#DFE8F3", "linecolor": "#A2B1C6", "ticks": "" } }, "coloraxis": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "colorscale": { "sequential": [
                                 [0.0, "#0d0887"],
                                 [0.1111111111111111, "#46039f"],
                                 [0.2222222222222222, "#7201a8"],
@@ -212,19 +212,19 @@ document.addEventListener("readystatechange", () => {
                                 [1.0, "#f0f921"]
                             ] }], "mesh3d": [{ "type": "mesh3d", "colorbar": { "outlinewidth": 0, "ticks": "" } }], "scatter": [{ "fillpattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 }, "type": "scatter" }], "parcoords": [{ "type": "parcoords", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolargl": [{ "type": "scatterpolargl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "bar": [{ "error_x": { "color": "#2a3f5f" }, "error_y": { "color": "#2a3f5f" }, "marker": { "line": { "color": "white", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "bar" }], "scattergeo": [{ "type": "scattergeo", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterpolar": [{ "type": "scatterpolar", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "histogram": [{ "marker": { "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "histogram" }], "scattergl": [{ "type": "scattergl", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatter3d": [{ "type": "scatter3d", "line": { "colorbar": { "outlinewidth": 0, "ticks": "" } }, "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermap": [{ "type": "scattermap", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattermapbox": [{ "type": "scattermapbox", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scatterternary": [{ "type": "scatterternary", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "scattercarpet": [{ "type": "scattercarpet", "marker": { "colorbar": { "outlinewidth": 0, "ticks": "" } } }], "carpet": [{ "aaxis": { "endlinecolor": "#2a3f5f", "gridcolor": "#C8D4E3", "linecolor": "#C8D4E3", "minorgridcolor": "#C8D4E3", "startlinecolor": "#2a3f5f" }, "baxis": { "endlinecolor": "#2a3f5f", "gridcolor": "#C8D4E3", "linecolor": "#C8D4E3", "minorgridcolor": "#C8D4E3", "startlinecolor": "#2a3f5f" }, "type": "carpet" }], "table": [{ "cells": { "fill": { "color": "#EBF0F8" }, "line": { "color": "white" } }, "header": { "fill": { "color": "#C8D4E3" }, "line": { "color": "white" } }, "type": "table" }], "barpolar": [{ "marker": { "line": { "color": "white", "width": 0.5 }, "pattern": { "fillmode": "overlay", "size": 10, "solidity": 0.2 } }, "type": "barpolar" }], "pie": [{ "automargin": true, "type": "pie" }] } };
 
-                // if jsonData.layout exists, then update the theme
-                if (jsonData.layout) {
-                    if (jsonData.layout.template) {
-                        jsonData.layout.template = Object.assign({}, plotlyLightLayout, jsonData.layout.template);
-                    } else {
-                        jsonData.layout.template = plotlyLightLayout;
-                    }
-                } else {
-                    jsonData.layout = { template: plotlyLightLayout };
-                }
-            }
+        // if jsonData.layout exists, then update the theme
+        if (jsonData.layout) {
+          if (jsonData.layout.template) {
+            jsonData.layout.template = Object.assign({}, plotlyLightLayout, jsonData.layout.template);
+          } else {
+            jsonData.layout.template = plotlyLightLayout;
+          }
+        } else {
+          jsonData.layout = { template: plotlyLightLayout };
+        }
+      }
 
-            Plotly.react(chartElement, jsonData.data, jsonData.layout);
-        });
-    }
+      Plotly.react(chartElement, jsonData.data, jsonData.layout);
+    });
+  }
 });
