@@ -204,6 +204,13 @@ Here are some photos of my cats. Each one has their own unique personality and b
   </div>
 </div>
 
+<div id="visitors"></div>
+## Website Visitors Map
+
+<!-- Mapmyvisitors Widget BEGIN -->
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
+<!-- Mapmyvisitors Widget END -->
+
 <script>
 document.addEventListener('scroll', function() {
   const progress = document.getElementById('progress');
