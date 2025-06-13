@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '~> 4.4.1'
+gem 'webrick', '~> 1.8'
 
 # Core plugins that directly affect site building
 group :jekyll_plugins do
     gem 'jekyll-archives-v2'
     gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
+    gem 'jekyll-feed', '~> 0.12'
     gem 'jekyll-get-json'
     gem 'jekyll-imagemagick'
     gem 'jekyll-jupyter-notebook'
@@ -15,12 +16,13 @@ group :jekyll_plugins do
     gem 'jekyll-paginate-v2'
     gem 'jekyll-regex-replace'
     gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
+    gem 'jekyll-sitemap', '~> 1.4'
     gem 'jekyll-tabs'
     gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
+    gem 'jekyll-seo-tag', '~> 2.8'
 
     gem 'classifier-reborn'  # used for content categorization during the build
 end

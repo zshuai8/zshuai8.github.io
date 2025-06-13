@@ -1,0 +1,23 @@
+- title: About Me
+  url: "#about"
+  nav_order: 1
+
+- title: Internship
+  url: "#internship"
+  nav_order: 2
+
+- title: News
+  url: "#news"
+  nav_order: 3
+
+- title: Publications
+  url: "#publications"
+  nav_order: 4
+
+- title: My Cats
+  url: "#cats"
+  nav_order: 5
+
+- title: CV
+  url: "#cv"
+  nav_order: 6 

@@ -85,10 +85,10 @@
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <strong><em>
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </em></strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
@@ -146,6 +146,12 @@
         >
         </i>
       {% endif %}
+      {%- if entry.author -%}
+        <span class="author">{{ entry.author }}</span>
+        {%- if entry.equal_contrib -%}
+          <span class="badge badge-info" style="margin-left: 0.5em;">Equal Contribution: {{ entry.equal_contrib }}</span>
+        {%- endif -%}
+      {%- endif -%}
     </div>
 
     <!-- Journal/Book title and date -->

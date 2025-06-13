@@ -1,0 +1,7 @@
+{% assign figure_path = include.path | relative_url %} {% assign figure_title = include.title %} {% assign figure_class = include.class %}
+
+<figure class="{{ figure_class }}">
+    <img src="{{ figure_path }}" alt="{{ figure_title }}" class="img-fluid rounded z-depth-1"> {% if include.caption %}
+    <figcaption class="caption">{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>

@@ -1,13 +1,41 @@
 ---
-layout: book-shelf
-title: bookshelf
-permalink: /books/
-nav: false
-collection: books
+layout: gallery
+title: My Cats
+permalink: /cats/
+nav: true
+nav_order: 3
 ---
 
-> What an astonishing thing a book is. It's a flat object made from a tree with flexible parts on which are imprinted lots of funny dark squiggles. But one glance at it and you're inside the mind of another person, maybe somebody dead for thousands of years. Across the millennia, an author is speaking clearly and silently inside your head, directly to you. Writing is perhaps the greatest of human inventions, binding together people who never knew each other, citizens of distant epochs. Books break the shackles of time. A book is proof that humans are capable of working magic.
+> Cats are connoisseurs of comfort.
 >
-> -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
+> -- James Herriot
 
-## Books that I am reading, have read, or will read
+## Meet my feline friends
+
+Here are some photos of my cats. Each one has their own unique personality and brings joy to my life in their own special way.
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo" class="img-fluid rounded z-depth-1" style="width: 300px; height: 400px; object-fit: cover;">
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="{{ '/assets/img/cats/joy.jpg' | relative_url }}" alt="Joy" class="img-fluid rounded z-depth-1" style="width: 300px; height: 400px; object-fit: cover;">
+  </div>
+</div>
+
+<div class="caption">
+  From left to right: Jojo and Joy enjoying their favorite spots.
+</div>
+
+<div class="row">
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="{{ '/assets/img/cats/1.jpg' | relative_url }}" alt="Cat 4" class="img-fluid rounded z-depth-1" style="width: 300px; height: 400px; object-fit: cover;">
+  </div>
+  <div class="col-sm mt-3 mt-md-0">
+    <img src="{{ '/assets/img/cats/2.jpg' | relative_url }}" alt="Cat 5" class="img-fluid rounded z-depth-1" style="width: 300px; height: 400px; object-fit: cover;">
+  </div>
+</div>
+
+<div class="caption">
+  More of my cats being their adorable selves.
+</div>
