@@ -1,0 +1,1 @@
+module.exports={compress:{ecma:2015,warnings:!1},mangle:!0,output:{ecma:2015,comments:!1},ecma:2015,parse:{ecma:2015}};
