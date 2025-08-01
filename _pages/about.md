@@ -74,6 +74,7 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
       <td style="color: red;">
+      <th scope="row" style="width: 20%">07/2025</th>
       Our paper <i>"When Heterophily Meets Heterogeneity"</i> received the <b>KDD 2025 Best Paper Award</b> in the <i>Dataset and Benchmark</i> track.
     </td>
       <tr>
