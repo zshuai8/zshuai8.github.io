@@ -73,6 +73,9 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 <div class="news">
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
+      <td style="color: red;">
+      Our paper <i>"When Heterophily Meets Heterogeneity"</i> received the <b>KDD 2025 Best Paper Award</b> in the <i>Dataset and Benchmark</i> track.
+    </td>
       <tr>
         <th scope="row" style="width: 20%">06/2025</th>
         <td>Starting my internship at Microsoft on GNN for Database Foundation Model— see you in Redmond 😊!</td>
