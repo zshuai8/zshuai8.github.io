@@ -73,6 +73,10 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 <div class="news">
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
+    <tr>
+        <th scope="row" style="width: 20%">05/2025</th>
+        <td>One paper accepted at Neurips 2025 — see you in San Deigo 😊!</td>
+      </tr>
       <tr style="color: red;">
   <th scope="row" style="width: 20%;">07/2025</th>
   <td>
