@@ -29,13 +29,13 @@ latest_posts:
 
 <div id="about"></div>
 ## About Me
-Hi there, I am a final-year PhD student in the Department of Computer Science at Virginia Tech, fortunately advised by Dr. Dawei Zhou. My research is centered on **open world graph learning** - building graph learning models that can continuously discover and integrate new knowledge from multimodal data streams in real-time, enabling AI systems to evolve their understanding without retraining.
+Hi there, I am a final-year PhD student in the Department of Computer Science at Virginia Tech, fortunately advised by Dr. Dawei Zhou. My research is centered on **open world graph learning** - developing machine learning systems that operate effectively on real world evolving, heterogeneous graph data through unified theoretical and algorithmic innovations, enabling capability of reasoning over complex relational data at scale and significantly enhance decision-making in critical applications.
 
 🔍 **Research Focus**
 * **Graph representation learning**, exploring expressive and scalable models for complex graph data
 * **Graph neural networks (GNNs)** for heterogeneous and heterophilous graphs
 * **Graph-augmented foundation models**, investigation into LLMs enhanced with graph structure
-* Applications in **AI for Finance** and **predictive maintenance**, grounding theoretical advances in impactful domains
+* **Graph learning applications** grounding theoretical advances in impactful domains such as predictive maintenance and AI for finance
 
 
 <div id="internship"></div>
