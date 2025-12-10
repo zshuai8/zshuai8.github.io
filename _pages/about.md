@@ -26,8 +26,17 @@ latest_posts:
   scrollable: false
   limit: 0
 ---
-
 <div id="about"></div>
+## About Me
+Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research focuses on **developing foundation models and graph-augmented AI systems** that bridge structured knowledge with large language models for enhanced reasoning and real-world decision-making.
+
+🔍 **Research Focus**
+* **Graph-augmented foundation models** - integrating graph neural networks with LLMs to enable structured reasoning over complex relational data
+* **Open-world graph learning** - building adaptive systems that handle evolving heterogeneous and heterophilic graph structures
+* **Multimodal AI systems** - combining vision, language, and graph modalities for industrial applications
+* **Real-world impact** - deployed systems in financial intelligence (fraud detection), database optimization, and predictive maintenance
+
+<!-- <div id="about"></div>
 ## About Me
 Hi there, I am a final-year PhD student in the Department of Computer Science at Virginia Tech, fortunately advised by Dr. Dawei Zhou. My research is centered on **open world graph learning** - building graph learning models that can continuously discover and integrate new knowledge from multimodal data streams in real-time, enabling AI systems to evolve their understanding without retraining.
 
@@ -36,7 +45,7 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 * **Graph neural networks (GNNs)** for heterogeneous and heterophilous graphs
 * **Graph-augmented foundation models**, investigation into LLMs enhanced with graph structure
 * Applications in **AI for Finance** and **predictive maintenance**, grounding theoretical advances in impactful domains
-
+ -->
 
 <div id="internship"></div>
 ## Internship
@@ -73,6 +82,14 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 <div class="news">
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
+    <tr>
+        <th scope="row" style="width: 20%">06/2026</th>
+        <td>I will start my internship at Oakridge National Laboratory on GraphRAG for Scientific Discovery at Spring 2026 😊!</td>
+      </tr>
+    <tr>
+        <th scope="row" style="width: 20%">12/2025</th>
+        <td>Attending Neurips 2025 in San Deigo, CA — see you at our poster session 😊!</td>
+      </tr>
     <tr>
         <th scope="row" style="width: 20%">09/2025</th>
         <td>One paper accepted at Neurips 2025 — see you in San Deigo 😊!</td>
