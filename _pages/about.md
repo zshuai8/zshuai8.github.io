@@ -28,13 +28,13 @@ latest_posts:
 ---
 <div id="about"></div>
 ## About Me
-Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research focuses on **developing foundation models and graph-augmented AI systems** that bridge structured knowledge with large language models for enhanced reasoning and real-world decision-making.
+Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research develops **efficient and effective inference methods** and **data strategies** for foundation models reasoning over structured knowledge.
 
 🔍 **Research Focus**
-* **Graph-augmented foundation models** - integrating graph neural networks with LLMs to enable structured reasoning over complex relational data
-* **Open-world graph learning** - building adaptive systems that handle evolving heterogeneous and heterophilic graph structures
-* **Multimodal AI systems** - combining vision, language, and graph modalities for industrial applications
-* **Real-world impact** - deployed systems in financial intelligence (fraud detection), database optimization, and predictive maintenance
+* **Scalable graph-LLM architectures** – integrating graph-structured context with foundation models at scale (billions of edges) for structured reasoning
+* **Training data pipelines** – building data recipes from knowledge graphs, temporal networks, and structured sources for graph-grounded tasks
+* **Open-world graph learning** – adaptive methods for heterophilic and heterogeneous graphs, handling evolving data distributions
+* **Real-world applications** – deployed systems in predictive maintenance, financial intelligence, database query understanding, and scientific discovery
 
 <!-- <div id="about"></div>
 ## About Me
@@ -83,7 +83,7 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
     <tr>
-        <th scope="row" style="width: 20%">06/2026</th>
+        <th scope="row" style="width: 20%">01/2026</th>
         <td>I will start my internship at Oakridge National Laboratory on GraphRAG for Scientific Discovery at Spring 2026 😊!</td>
       </tr>
     <tr>
