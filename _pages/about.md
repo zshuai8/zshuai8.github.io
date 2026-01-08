@@ -53,7 +53,7 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 
 <div class="row">
   <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/microsoft.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
+    <img src="./assets/img/logos/ornl.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
     <div style="display: flex; flex-direction: column; justify-content: center;">
       <strong>2026</strong> — Research Intern, Oak Ridge National Laboratory, Oak Ridge, TN, USA
     </div>
