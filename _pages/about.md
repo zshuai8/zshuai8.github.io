@@ -34,6 +34,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 * **Scalable graph-LLM architectures** – integrating graph-structured context with foundation models at scale (billions of edges) for structured reasoning
 * **Training data pipelines** – building data recipes from knowledge graphs, temporal networks, and structured sources for graph-grounded tasks
 * **Open-world graph learning** – adaptive methods for heterophilic and heterogeneous graphs, handling evolving data distributions
+* **Multi-modal reasoning** – joint learning over multimodal data sources such as graph structure, time-series telemetry, and language for industrial applications
 * **Real-world applications** – deployed systems in predictive maintenance, financial intelligence, database query understanding, and scientific discovery
 
 <!-- <div id="about"></div>
@@ -51,6 +52,12 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 ## Internship
 
 <div class="row">
+  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
+    <img src="./assets/img/logos/microsoft.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
+    <div style="display: flex; flex-direction: column; justify-content: center;">
+      <strong>2026</strong> — Research Intern, Oak Ridge National Laboratory, Oak Ridge, TN, USA
+    </div>
+  </div>
   <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
     <img src="./assets/img/logos/microsoft.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
     <div style="display: flex; flex-direction: column; justify-content: center;">
