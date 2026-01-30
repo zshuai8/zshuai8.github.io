@@ -30,12 +30,16 @@ latest_posts:
 ## About Me
 Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research develops **efficient and effective inference methods** and **data strategies** for foundation models reasoning over structured knowledge.
 
+
+
 🔍 **Research Focus**
 * **Scalable graph-LLM architectures** – integrating graph-structured context with foundation models at scale (billions of edges) for structured reasoning
 * **Training data pipelines** – building data recipes from knowledge graphs, temporal networks, and structured sources for graph-grounded tasks
 * **Open-world graph learning** – adaptive methods for heterophilic and heterogeneous graphs, handling evolving data distributions
 * **Multi-modal reasoning** – joint learning over multimodal data sources such as graph structure, time-series telemetry, and language for industrial applications
 * **Real-world applications** – deployed systems in predictive maintenance, financial intelligence, database query understanding, and scientific discovery
+
+📢 **I am on the job market for industry research positions starting Fall 2026!** I am looking for Research Scientist / Applied Scientist roles in areas related to graph learning, foundation models, and AI systems. Feel free to reach out!
 
 <!-- <div id="about"></div>
 ## About Me
@@ -89,6 +93,10 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 <div class="news">
   <div class="table-responsive" style="max-height: 20vw">
     <table class="table table-sm table-borderless">
+    <tr>
+    <th scope="row" style="width: 20%">01/2026</th>
+    <td>Gave an invited talk at Microsoft Research on Open World Graph Learning 😊!</td>
+</tr>
     <tr>
         <th scope="row" style="width: 20%">01/2026</th>
         <td>I will start my internship at Oakridge National Laboratory on GraphRAG for Scientific Discovery at Spring 2026 😊!</td>
