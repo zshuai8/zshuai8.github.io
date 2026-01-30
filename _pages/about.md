@@ -30,16 +30,16 @@ latest_posts:
 ## About Me
 Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research develops **efficient and effective inference methods** and **data strategies** for foundation models reasoning over structured knowledge.
 
-
-
 🔍 **Research Focus**
-* **Scalable graph-LLM architectures** – integrating graph-structured context with foundation models at scale (billions of edges) for structured reasoning
-* **Training data pipelines** – building data recipes from knowledge graphs, temporal networks, and structured sources for graph-grounded tasks
-* **Open-world graph learning** – adaptive methods for heterophilic and heterogeneous graphs, handling evolving data distributions
-* **Multi-modal reasoning** – joint learning over multimodal data sources such as graph structure, time-series telemetry, and language for industrial applications
-* **Real-world applications** – deployed systems in predictive maintenance, financial intelligence, database query understanding, and scientific discovery
+* **Agentic AI systems** – building autonomous agents with planning, tool use, and structured reasoning capabilities
+* **Memory-augmented LLMs** – long-term memory, retrieval-augmented generation, and context management at scale
+* **Graph-grounded reasoning** – integrating knowledge graphs and structured context with foundation models (GraphRAG, graph-LLM architectures)
+* **Multimodal foundation models** – joint learning over text, graph structures, time-series, and other modalities
+* **Real-world deployments** – applied systems in predictive maintenance, financial intelligence, database optimization, and scientific discovery
 
-📢 **I am on the job market for industry research positions starting Fall 2026!** I am looking for Research Scientist / Applied Scientist roles in areas related to graph learning, foundation models, and AI systems. Feel free to reach out!
+<p style="color: red; font-weight: bold;">
+📢 I am on the job market for industry research positions starting Fall 2026! Feel free to <a href="mailto:YOUR_EMAIL" style="color: red;">reach out</a>!
+</p>
 
 <!-- <div id="about"></div>
 ## About Me
