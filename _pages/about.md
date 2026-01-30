@@ -38,7 +38,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 * **Real-world deployments** – applied systems in predictive maintenance, financial intelligence, database optimization, and scientific discovery
 
 <p style="color: red; font-weight: bold;">
-📢 I am on the job market for industry research positions starting Fall 2026! Feel free to <a href="mailto:YOUR_EMAIL" style="color: red;">reach out</a>!
+📢 I am on the job market for industry research positions starting June 2026! Feel free to <a href="mailto:zshuai8@vt.edu" style="color: red;">reach out</a>!
 </p>
 
 <!-- <div id="about"></div>
