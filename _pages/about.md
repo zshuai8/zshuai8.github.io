@@ -105,10 +105,16 @@ latest_posts:
   object-fit: cover;
 }
 
-/* ── Visitor Badge ── */
-.visitor-badge {
-  text-align: center;
-  padding: 1rem 0;
+/* ── Scroll Animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-on-scroll {
+  opacity: 0;
+}
+.animate-on-scroll.visible {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 </style>
 
@@ -123,7 +129,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 * **Multimodal foundation models** – joint learning over text, graph structures, time-series, and other modalities
 * **Real-world deployments** – applied systems in predictive maintenance, financial intelligence, database optimization, and scientific discovery
 
-<div class="job-market-banner">
+<div class="job-market-banner animate-on-scroll">
 📢 I am on the job market for industry research positions starting June 2026! Feel free to <a href="mailto:zshuai8@vt.edu">reach out</a>!
 </div>
 
@@ -131,31 +137,31 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 ## Internship
 
 <div class="row">
-  <div class="col-md-12 mb-3 internship-entry">
+  <div class="col-md-12 mb-3 internship-entry animate-on-scroll">
     <img src="./assets/img/logos/ornl.png" alt="Oak Ridge National Laboratory">
     <div>
       <strong>2026</strong> — Research Intern, Oak Ridge National Laboratory, Oak Ridge, TN, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3 internship-entry">
+  <div class="col-md-12 mb-3 internship-entry animate-on-scroll">
     <img src="./assets/img/logos/microsoft.png" alt="Microsoft">
     <div>
       <strong>2025</strong> — Research Intern, Microsoft Research, Redmond, WA, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3 internship-entry">
+  <div class="col-md-12 mb-3 internship-entry animate-on-scroll">
     <img src="./assets/img/logos/ibm.png" alt="MIT-IBM Lab">
     <div>
       <strong>2023</strong> — Research Intern, MIT-IBM Lab, Cambridge, MA, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3 internship-entry">
+  <div class="col-md-12 mb-3 internship-entry animate-on-scroll">
     <img src="./assets/img/logos/deloitte.png" alt="Deloitte">
     <div>
       <strong>2021</strong> — NLP Research Intern, Natural Language Processing Team, Deloitte, NY, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3 internship-entry">
+  <div class="col-md-12 mb-3 internship-entry animate-on-scroll">
     <img src="./assets/img/logos/hundsun.png" alt="Hundsun Technologies">
     <div>
       <strong>2017</strong> — Software Development Engineer Intern, Trust Team, Hundsun Technologies Inc., Hangzhou, China
@@ -165,7 +171,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 
 <div id="news"></div>
 ## News
-<div class="news">
+<div class="news animate-on-scroll">
   <div class="table-responsive" style="max-height: 60vh">
     <table class="table table-sm table-borderless">
     <tr>
@@ -268,7 +274,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 
 <div id="publications"></div>
 ## Publications
-<div class="publications">
+<div class="publications animate-on-scroll">
 {% bibliography %}
 </div>
 
@@ -282,10 +288,10 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 Here are some photos of my cats. Each one has their own unique personality and brings joy to my life in their own special way.
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0 cat-photo">
+  <div class="col-sm mt-3 mt-md-0 cat-photo animate-on-scroll">
     <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo" class="img-fluid rounded z-depth-1">
   </div>
-  <div class="col-sm mt-3 mt-md-0 cat-photo">
+  <div class="col-sm mt-3 mt-md-0 cat-photo animate-on-scroll">
     <img src="{{ '/assets/img/cats/joy.jpg' | relative_url }}" alt="Joy" class="img-fluid rounded z-depth-1">
   </div>
 </div>
@@ -295,10 +301,10 @@ Here are some photos of my cats. Each one has their own unique personality and b
 </div>
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0 cat-photo">
+  <div class="col-sm mt-3 mt-md-0 cat-photo animate-on-scroll">
     <img src="{{ '/assets/img/cats/1.jpg' | relative_url }}" alt="Cat 4" class="img-fluid rounded z-depth-1">
   </div>
-  <div class="col-sm mt-3 mt-md-0 cat-photo">
+  <div class="col-sm mt-3 mt-md-0 cat-photo animate-on-scroll">
     <img src="{{ '/assets/img/cats/2.jpg' | relative_url }}" alt="Cat 5" class="img-fluid rounded z-depth-1">
   </div>
 </div>
@@ -309,7 +315,7 @@ Here are some photos of my cats. Each one has their own unique personality and b
 
 <div id="cv"></div>
 ## CV
-<div class="cv">
+<div class="cv animate-on-scroll">
   <div class="card mt-3">
     <div class="card-body">
       <iframe src="{{ '/assets/pdf/cv.pdf' | relative_url }}" width="100%" height="800px" style="border: none;">
@@ -322,9 +328,42 @@ Here are some photos of my cats. Each one has their own unique personality and b
 </div>
 
 <div id="visitors"></div>
-## Visitors
+## Website Visitors Map
 
-<div class="visitor-badge">
-  <img src="https://api.visitorbadge.io/api/visitors?path=zshuai8.github.io&label=Total%20Visits&countColor=%23263759" alt="Total Visits">
+<div class="animate-on-scroll">
+
+<!-- Mapmyvisitors Widget BEGIN -->
+<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
+<!-- Mapmyvisitors Widget END -->
+
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        entry.target.addEventListener('animationend', function() {
+          this.style.opacity = '1';
+          this.classList.remove('animate-on-scroll', 'visible');
+        }, { once: true });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Stagger delays for grouped elements
+  document.querySelectorAll('.internship-entry.animate-on-scroll').forEach(function(el, i) {
+    el.style.animationDelay = (i * 0.1) + 's';
+  });
+  document.querySelectorAll('.cat-photo.animate-on-scroll').forEach(function(el, i) {
+    el.style.animationDelay = (i * 0.15) + 's';
+  });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+    observer.observe(el);
+  });
+});
+</script>
 
