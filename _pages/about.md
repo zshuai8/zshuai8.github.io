@@ -26,6 +26,30 @@ latest_posts:
   scrollable: false
   limit: 0
 ---
+<style>
+.job-market-banner {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+.job-market-banner a {
+  color: red;
+}
+.internship-entry {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 16px 0;
+  min-height: 64px;
+}
+.internship-entry img {
+  height: 48px;
+  width: auto;
+  padding: 4px 0;
+}
+</style>
+
 <div id="about"></div>
 ## About Me
 Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. My research develops **efficient and effective inference methods** and **data strategies** for foundation models reasoning over structured knowledge.
@@ -37,52 +61,41 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 * **Multimodal foundation models** – joint learning over text, graph structures, time-series, and other modalities
 * **Real-world deployments** – applied systems in predictive maintenance, financial intelligence, database optimization, and scientific discovery
 
-<p style="color: red; font-weight: bold;">
-📢 I am on the job market for industry research positions starting June 2026! Feel free to <a href="mailto:zshuai8@vt.edu" style="color: red;">reach out</a>!
-</p>
-
-<!-- <div id="about"></div>
-## About Me
-Hi there, I am a final-year PhD student in the Department of Computer Science at Virginia Tech, fortunately advised by Dr. Dawei Zhou. My research is centered on **open world graph learning** - building graph learning models that can continuously discover and integrate new knowledge from multimodal data streams in real-time, enabling AI systems to evolve their understanding without retraining.
-
-🔍 **Research Focus**
-* **Graph representation learning**, exploring expressive and scalable models for complex graph data
-* **Graph neural networks (GNNs)** for heterogeneous and heterophilous graphs
-* **Graph-augmented foundation models**, investigation into LLMs enhanced with graph structure
-* Applications in **AI for Finance** and **predictive maintenance**, grounding theoretical advances in impactful domains
- -->
+<div class="job-market-banner">
+📢 I am on the job market for industry research positions starting June 2026! Feel free to <a href="mailto:zshuai8@vt.edu">reach out</a>!
+</div>
 
 <div id="internship"></div>
 ## Internship
 
 <div class="row">
-  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/ornl.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
+  <div class="col-md-12 mb-3 internship-entry">
+    <img src="./assets/img/logos/ornl.png" alt="Oak Ridge National Laboratory">
+    <div>
       <strong>2026</strong> — Research Intern, Oak Ridge National Laboratory, Oak Ridge, TN, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/microsoft.png" alt="Microsoft" style="height:48px; width:auto; padding: 4px 0;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
+  <div class="col-md-12 mb-3 internship-entry">
+    <img src="./assets/img/logos/microsoft.png" alt="Microsoft">
+    <div>
       <strong>2025</strong> — Research Intern, Microsoft Research, Redmond, WA, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/ibm.png" alt="MIT-IBM Lab" style="height:48px; width:auto; padding: 4px 0;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
+  <div class="col-md-12 mb-3 internship-entry">
+    <img src="./assets/img/logos/ibm.png" alt="MIT-IBM Lab">
+    <div>
       <strong>2023</strong> — Research Intern, MIT-IBM Lab, Cambridge, MA, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/deloitte.png" alt="Deloitte" style="height:48px; width:auto; padding: 4px 0;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
-      <strong>2021</strong> — NLP Research Intern, Nature Language Processing Team, Deloitte, NY, USA
+  <div class="col-md-12 mb-3 internship-entry">
+    <img src="./assets/img/logos/deloitte.png" alt="Deloitte">
+    <div>
+      <strong>2021</strong> — NLP Research Intern, Natural Language Processing Team, Deloitte, NY, USA
     </div>
   </div>
-  <div class="col-md-12 mb-3" style="display: flex; align-items: center; gap: 1.5em; padding: 16px 0; min-height: 64px;">
-    <img src="./assets/img/logos/hundsun.png" alt="Hundsun Technologies" style="height:48px; width:auto; padding: 4px 0;">
-    <div style="display: flex; flex-direction: column; justify-content: center;">
+  <div class="col-md-12 mb-3 internship-entry">
+    <img src="./assets/img/logos/hundsun.png" alt="Hundsun Technologies">
+    <div>
       <strong>2017</strong> — Software Development Engineer Intern, Trust Team, Hundsun Technologies Inc., Hangzhou, China
     </div>
   </div>
@@ -91,7 +104,7 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
 <div id="news"></div>
 ## News
 <div class="news">
-  <div class="table-responsive" style="max-height: 20vw">
+  <div class="table-responsive" style="max-height: 60vh">
     <table class="table table-sm table-borderless">
     <tr>
     <th scope="row" style="width: 20%">01/2026</th>
@@ -103,11 +116,11 @@ Hi there, I am a final-year PhD student in the Department of Computer Science at
       </tr>
     <tr>
         <th scope="row" style="width: 20%">12/2025</th>
-        <td>Attending Neurips 2025 in San Deigo, CA — see you at our poster session 😊!</td>
+        <td>Attending NeurIPS 2025 in San Diego, CA — see you at our poster session 😊!</td>
       </tr>
     <tr>
         <th scope="row" style="width: 20%">09/2025</th>
-        <td>One paper accepted at Neurips 2025 — see you in San Deigo 😊!</td>
+        <td>One paper accepted at NeurIPS 2025 — see you in San Diego 😊!</td>
       </tr>
       <tr style="color: red;">
   <th scope="row" style="width: 20%;">07/2025</th>
@@ -253,13 +266,3 @@ Here are some photos of my cats. Each one has their own unique personality and b
 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
 <!-- Mapmyvisitors Widget END -->
 
-<script>
-document.addEventListener('scroll', function() {
-  const progress = document.getElementById('progress');
-  if (!progress) return;
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const percent = docHeight > 0 ? (scrollTop / docHeight) : 0;
-  progress.value = percent;
-});
-</script>
