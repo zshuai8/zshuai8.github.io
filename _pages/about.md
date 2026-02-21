@@ -27,26 +27,88 @@ latest_posts:
   limit: 0
 ---
 <style>
+/* ── Job Market Banner ── */
 .job-market-banner {
-  color: red;
+  background: var(--global-card-bg-color);
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5em 0;
   font-weight: bold;
-  font-size: 1.1em;
-  margin: 1em 0;
+  font-size: 1.05em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: bannerGlow 2.5s ease-in-out infinite alternate;
 }
 .job-market-banner a {
-  color: red;
+  color: var(--global-theme-color);
+  text-decoration: underline;
 }
+@keyframes bannerGlow {
+  from { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+  to   { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16), 0 0 0 1px var(--global-theme-color); }
+}
+
+/* ── Internship Timeline Cards ── */
 .internship-entry {
   display: flex;
   align-items: center;
-  gap: 1.5em;
-  padding: 16px 0;
+  gap: 1.25em;
+  padding: 0.9rem 1.25rem;
   min-height: 64px;
+  background: var(--global-card-bg-color);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.internship-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 .internship-entry img {
-  height: 48px;
+  height: 44px;
   width: auto;
-  padding: 4px 0;
+  border-radius: 6px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ── News Section ── */
+.news .table-borderless th {
+  color: var(--global-theme-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.news .table-borderless tr {
+  transition: background-color 0.2s ease;
+}
+.news .table-borderless tr:hover {
+  background-color: var(--global-divider-color);
+}
+
+/* ── Cat Photos ── */
+.cat-photo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.cat-photo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.cat-photo img {
+  width: 100%;
+  height: 266px;
+  object-fit: cover;
+}
+
+/* ── Visitor Badge ── */
+.visitor-badge {
+  text-align: center;
+  padding: 1rem 0;
 }
 </style>
 
@@ -220,11 +282,11 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 Here are some photos of my cats. Each one has their own unique personality and brings joy to my life in their own special way.
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo" class="img-fluid rounded z-depth-1" style="width: 400px; height: 266px; object-fit: cover; margin-bottom: 1rem;">
+  <div class="col-sm mt-3 mt-md-0 cat-photo">
+    <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo" class="img-fluid rounded z-depth-1">
   </div>
-  <div class="col-sm mt-3 mt-md-0">
-    <img src="{{ '/assets/img/cats/joy.jpg' | relative_url }}" alt="Joy" class="img-fluid rounded z-depth-1" style="width: 400px; height: 266px; object-fit: cover; margin-bottom: 1rem;">
+  <div class="col-sm mt-3 mt-md-0 cat-photo">
+    <img src="{{ '/assets/img/cats/joy.jpg' | relative_url }}" alt="Joy" class="img-fluid rounded z-depth-1">
   </div>
 </div>
 
@@ -233,11 +295,11 @@ Here are some photos of my cats. Each one has their own unique personality and b
 </div>
 
 <div class="row">
-  <div class="col-sm mt-3 mt-md-0">
-    <img src="{{ '/assets/img/cats/1.jpg' | relative_url }}" alt="Cat 4" class="img-fluid rounded z-depth-1" style="width: 400px; height: 266px; object-fit: cover; margin-bottom: 1rem;">
+  <div class="col-sm mt-3 mt-md-0 cat-photo">
+    <img src="{{ '/assets/img/cats/1.jpg' | relative_url }}" alt="Cat 4" class="img-fluid rounded z-depth-1">
   </div>
-  <div class="col-sm mt-3 mt-md-0">
-    <img src="{{ '/assets/img/cats/2.jpg' | relative_url }}" alt="Cat 5" class="img-fluid rounded z-depth-1" style="width: 400px; height: 266px; object-fit: cover; margin-bottom: 1rem;">
+  <div class="col-sm mt-3 mt-md-0 cat-photo">
+    <img src="{{ '/assets/img/cats/2.jpg' | relative_url }}" alt="Cat 5" class="img-fluid rounded z-depth-1">
   </div>
 </div>
 
@@ -260,9 +322,9 @@ Here are some photos of my cats. Each one has their own unique personality and b
 </div>
 
 <div id="visitors"></div>
-## Website Visitors Map
+## Visitors
 
-<!-- Mapmyvisitors Widget BEGIN -->
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
-<!-- Mapmyvisitors Widget END -->
+<div class="visitor-badge">
+  <img src="https://api.visitorbadge.io/api/visitors?path=zshuai8.github.io&label=Total%20Visits&countColor=%23263759" alt="Total Visits">
+</div>
 

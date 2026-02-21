@@ -148,11 +148,8 @@
         >
         </i>
       {% endif %}
-      {%- if entry.author -%}
-        <span class="author">{{ entry.author }}</span>
-        {%- if entry.equal_contrib -%}
-          <span class="badge badge-info" style="margin-left: 0.5em;">Equal Contribution: {{ entry.equal_contrib }}</span>
-        {%- endif -%}
+      {%- if entry.equal_contrib -%}
+        <span class="badge badge-info" style="margin-left: 0.5em;">Equal Contribution: {{ entry.equal_contrib }}</span>
       {%- endif -%}
     </div>
 
