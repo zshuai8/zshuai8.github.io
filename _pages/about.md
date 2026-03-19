@@ -27,7 +27,7 @@ latest_posts:
   limit: 0
 ---
 <style>
-/* ── Job Market Banner ── */
+/* ── Announcement Banner ── */
 .job-market-banner {
   background: var(--global-card-bg-color);
   border-left: 4px solid var(--global-theme-color);
@@ -130,7 +130,7 @@ Hi there, I am a final-year PhD candidate in Computer Science at Virginia Tech, 
 * **Real-world deployments** – applied systems in predictive maintenance, financial intelligence, database optimization, and scientific discovery
 
 <div class="job-market-banner animate-on-scroll">
-📢 I am on the job market for industry research positions starting June 2026! Feel free to <a href="mailto:zshuai8@vt.edu">reach out</a>!
+🎉 I am thrilled to announce that I will be joining <strong>LinkedIn</strong> as an <strong>AI Engineer</strong>! Beyond my role, I'm always eager to collaborate on topics close to my research — especially agentic systems for scientific discovery and multimodal agent memory systems. Feel free to <a href="mailto:zshuai8@vt.edu">reach out</a>!
 </div>
 
 <div id="internship"></div>
