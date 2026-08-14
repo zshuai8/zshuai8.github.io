@@ -277,6 +277,7 @@ html[data-theme="dark"] .future-body .navbar {
 
 .future-hero h1 span {
   display: block;
+  padding-bottom: 0.12em;
   color: transparent;
   background: linear-gradient(110deg, var(--future-cyan), var(--future-violet) 70%);
   background-clip: text;
