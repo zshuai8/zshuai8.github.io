@@ -198,6 +198,7 @@ html[data-theme="dark"] .future-body .navbar {
   position: relative;
   min-height: calc(100vh - 66px);
   padding: clamp(4rem, 8vw, 7rem) 0 5.5rem;
+  overflow-x: clip;
   isolation: isolate;
 }
 
@@ -929,6 +930,7 @@ html[data-theme="dark"] .echo-future-gon {
 .future-section {
   position: relative;
   padding: clamp(5rem, 10vw, 8.5rem) 0;
+  overflow-x: clip;
   border-top: 1px solid var(--future-line);
   scroll-margin-top: 66px;
   isolation: isolate;
