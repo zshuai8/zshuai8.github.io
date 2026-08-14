@@ -1,23 +1,27 @@
-- title: About Me
+- title: Profile
   url: "#about"
   nav_order: 1
 
-- title: Internship
-  url: "#internship"
+- title: Research
+  url: "#research"
   nav_order: 2
 
-- title: News
-  url: "#news"
+- title: Journey
+  url: "#internship"
   nav_order: 3
 
-- title: Publications
-  url: "#publications"
+- title: Now
+  url: "#news"
   nav_order: 4
 
-- title: My Cats
-  url: "#cats"
+- title: Papers
+  url: "#publications"
   nav_order: 5
+
+- title: Beyond
+  url: "#cats"
+  nav_order: 6
 
 - title: CV
   url: "#cv"
-  nav_order: 6
+  nav_order: 7
