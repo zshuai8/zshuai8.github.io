@@ -50,6 +50,20 @@
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 
+  const nenToggle = document.querySelector("[data-nen-toggle]");
+  const nenToggleLabel = document.querySelector("[data-nen-toggle-label]");
+  const nenState = document.querySelector("[data-nen-state]");
+
+  if (nenToggle) {
+    nenToggle.addEventListener("click", () => {
+      const activating = !body.classList.contains("nen-active");
+      body.classList.toggle("nen-active", activating);
+      nenToggle.setAttribute("aria-pressed", activating ? "true" : "false");
+      if (nenToggleLabel) nenToggleLabel.textContent = activating ? "Nen Active" : "Activate Nen";
+      if (nenState) nenState.textContent = activating ? "AURA ACTIVE · REN FLOW STABLE" : "AURA DORMANT · ACTIVATE NEN";
+    });
+  }
+
   const researchNodes = document.querySelectorAll("[data-research-node]");
   const researchConsole = document.querySelector(".research-console");
   const detailIndex = document.getElementById("research-detail-index");

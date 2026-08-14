@@ -26,6 +26,7 @@ latest_posts:
       <div class="hero-actions" aria-label="Primary links">
         <a class="future-button future-button-primary" href="#research">Explore my research <i class="ti ti-arrow-down-right" aria-hidden="true"></i></a>
         <a class="future-button" href="#publications">View publications</a>
+        <button class="future-button nen-toggle" type="button" data-nen-toggle aria-pressed="false" aria-controls="hunter-license"><span class="nen-glyph" aria-hidden="true">念</span><span data-nen-toggle-label>Activate Nen</span></button>
         <a class="future-button future-button-icon" href="mailto:zshuai8@vt.edu" aria-label="Email Shuaicheng Zhang"><i class="ti ti-mail" aria-hidden="true"></i></a>
       </div>
 
@@ -34,9 +35,23 @@ latest_posts:
         <div><span>Next chapter</span><strong>LinkedIn AI Engineer</strong></div>
         <div><span>2026</span><strong>TMLR + CIKM</strong></div>
       </div>
+
+      <aside class="hunter-license" id="hunter-license" aria-label="Research Hunter license" data-tilt>
+        <div class="license-topline"><span>RESEARCH HUNTER LICENSE</span><span>NO. 2026-SZ</span></div>
+        <div class="license-body">
+          <div class="license-emblem" aria-hidden="true"><span>×</span><strong>SZ</strong></div>
+          <div class="license-identity"><span>LICENSED TO EXPLORE</span><strong>Shuaicheng Zhang</strong><small>Intelligent systems · open-world discovery</small></div>
+          <dl class="license-fields">
+            <div><dt>CLASS</dt><dd>Research Hunter</dd></div>
+            <div><dt>AFFINITY</dt><dd>Specialist</dd></div>
+          </dl>
+        </div>
+        <div class="license-status"><span class="license-status-dot" aria-hidden="true"></span><span data-nen-state>AURA DORMANT · ACTIVATE NEN</span><i class="ti ti-sparkles" aria-hidden="true"></i></div>
+      </aside>
     </div>
 
     <div class="hero-visual reveal" data-tilt>
+      <div class="nen-aura" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="portrait-orbit orbit-one" aria-hidden="true"></div>
       <div class="portrait-orbit orbit-two" aria-hidden="true"></div>
       <div class="portrait-card">

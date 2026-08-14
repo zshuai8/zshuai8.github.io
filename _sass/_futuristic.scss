@@ -13,6 +13,7 @@ body.future-body {
   --future-cyan-bright: #00c7dd;
   --future-violet: #6658e8;
   --future-lime: #63a923;
+  --nen-green: #54c96b;
   --future-shadow: 0 28px 80px rgba(29, 42, 73, 0.12);
   --pointer-x: 78%;
   --pointer-y: 10%;
@@ -113,6 +114,13 @@ html[data-theme="dark"] .future-body .navbar {
 
 .brand-label {
   font-size: 0.9rem;
+}
+
+.brand-x {
+  color: var(--nen-green);
+  font-size: 1.08em;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(84, 201, 107, 0.42);
 }
 
 .future-body .navbar-nav {
@@ -359,6 +367,46 @@ html[data-theme="dark"] .future-body .navbar {
   padding: 0;
 }
 
+.nen-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.nen-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, rgba(84, 201, 107, 0.18), rgba(89, 230, 244, 0.15));
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.nen-toggle > * {
+  position: relative;
+}
+
+.nen-glyph {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1px solid rgba(84, 201, 107, 0.5);
+  border-radius: 50%;
+  color: var(--nen-green);
+  font-family: serif;
+  font-size: 0.74rem;
+  line-height: 1;
+}
+
+.nen-toggle[aria-pressed="true"] {
+  border-color: var(--nen-green);
+  box-shadow: 0 0 0 1px rgba(84, 201, 107, 0.12), 0 12px 34px rgba(84, 201, 107, 0.14);
+}
+
+.nen-toggle[aria-pressed="true"]::before {
+  opacity: 1;
+}
+
 .hero-signals {
   display: grid;
   max-width: 670px;
@@ -397,6 +445,198 @@ html[data-theme="dark"] .future-body .navbar {
   white-space: nowrap;
 }
 
+.hunter-license {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  position: relative;
+  max-width: 670px;
+  overflow: hidden;
+  margin-top: 1rem;
+  border: 1px solid rgba(121, 242, 255, 0.18);
+  border-radius: 17px;
+  color: #edfaff;
+  background:
+    linear-gradient(135deg, rgba(84, 201, 107, 0.11), transparent 34%),
+    radial-gradient(circle at 94% 8%, rgba(102, 88, 232, 0.24), transparent 14rem),
+    #09111d;
+  box-shadow: 0 20px 48px rgba(11, 24, 42, 0.12);
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 160ms ease-out;
+}
+
+.hunter-license::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 28%, rgba(255, 255, 255, 0.08) 46%, transparent 64%);
+  pointer-events: none;
+  transform: translateX(-115%);
+}
+
+.license-topline,
+.license-status {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #8397af;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.57rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.license-topline {
+  justify-content: space-between;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid rgba(149, 207, 224, 0.12);
+}
+
+.license-topline span,
+.license-status span {
+  color: inherit;
+}
+
+.license-body {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.license-emblem {
+  position: relative;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(84, 201, 107, 0.45);
+  border-radius: 13px;
+  background: rgba(84, 201, 107, 0.07);
+}
+
+.license-emblem span {
+  position: absolute;
+  color: rgba(84, 201, 107, 0.22);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 4.6rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: rotate(-9deg);
+}
+
+.license-emblem strong {
+  position: relative;
+  color: #e8fff0;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.license-identity {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.license-identity span {
+  color: #63dc79;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+}
+
+.license-identity strong {
+  overflow: hidden;
+  color: #f2fbff;
+  font-size: 0.95rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.license-identity small {
+  overflow: hidden;
+  color: #8397af;
+  font-size: 0.65rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.license-fields {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1.2rem;
+  margin: 0;
+}
+
+.license-fields div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.license-fields dt {
+  color: #65798f;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.license-fields dd {
+  margin: 0;
+  color: #dffaff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.license-status {
+  padding: 0.48rem 0.8rem;
+  border-top: 1px solid rgba(149, 207, 224, 0.12);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.license-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #65798f;
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+.license-status i {
+  margin-left: auto;
+  color: #65798f;
+  font-size: 0.85rem;
+}
+
+.nen-active .hunter-license {
+  border-color: rgba(84, 201, 107, 0.55);
+  box-shadow: 0 20px 55px rgba(29, 110, 64, 0.18), inset 0 0 35px rgba(84, 201, 107, 0.035);
+}
+
+.nen-active .hunter-license::after {
+  animation: license-shine 1.2s ease-out both;
+}
+
+.nen-active .license-status {
+  color: #84e895;
+}
+
+.nen-active .license-status-dot {
+  background: #63dc79;
+  box-shadow: 0 0 0 5px rgba(84, 201, 107, 0.12), 0 0 16px rgba(84, 201, 107, 0.85);
+  animation: signal-pulse 1.8s ease-in-out infinite;
+}
+
+.nen-active .license-status i {
+  color: #63dc79;
+}
+
 .hero-visual {
   --tilt-x: 0deg;
   --tilt-y: 0deg;
@@ -407,6 +647,39 @@ html[data-theme="dark"] .future-body .navbar {
   transition: transform 160ms ease-out;
   transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
   transform-style: preserve-3d;
+}
+
+.nen-aura {
+  position: absolute;
+  z-index: -2;
+  inset: -16%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 450ms ease;
+}
+
+.nen-aura span {
+  position: absolute;
+  border: 1px solid rgba(84, 201, 107, 0.34);
+  border-radius: 46% 54% 49% 51%;
+  filter: drop-shadow(0 0 16px rgba(84, 201, 107, 0.26));
+}
+
+.nen-aura span:first-child { inset: 7%; }
+.nen-aura span:nth-child(2) { inset: 1%; border-color: rgba(89, 230, 244, 0.26); }
+.nen-aura span:nth-child(3) { inset: -5%; border-color: rgba(102, 88, 232, 0.22); }
+
+.nen-active .nen-aura {
+  opacity: 1;
+}
+
+.nen-active .nen-aura span:first-child { animation: nen-breathe 4.6s ease-in-out infinite alternate; }
+.nen-active .nen-aura span:nth-child(2) { animation: nen-breathe 6s ease-in-out -1.7s infinite alternate-reverse; }
+.nen-active .nen-aura span:nth-child(3) { animation: nen-breathe 7.2s ease-in-out -3.1s infinite alternate; }
+
+.nen-active .portrait-card {
+  border-color: rgba(84, 201, 107, 0.42);
+  box-shadow: 0 28px 90px rgba(41, 132, 72, 0.22), 0 0 52px rgba(84, 201, 107, 0.12);
 }
 
 .portrait-card {
@@ -1667,6 +1940,16 @@ html[data-theme="dark"] .future-body .navbar {
   50% { background-position: 100% 50%; }
 }
 
+@keyframes license-shine {
+  from { transform: translateX(-115%); }
+  to { transform: translateX(115%); }
+}
+
+@keyframes nen-breathe {
+  from { transform: rotate(-5deg) scale(0.96); opacity: 0.42; }
+  to { transform: rotate(8deg) scale(1.04); opacity: 1; }
+}
+
 @keyframes signal-pulse {
   0%, 100% { opacity: 0.65; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.08); }
@@ -1812,6 +2095,15 @@ html[data-theme="dark"] .future-body .navbar {
   .chip-agent { top: 45%; right: -2%; }
   .chip-trust { right: 8%; }
   .portrait-card { border-radius: 24px 24px 80px 24px; }
+  .license-body { grid-template-columns: 48px minmax(0, 1fr); }
+  .license-emblem { width: 48px; height: 48px; }
+  .license-fields {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    padding-top: 0.25rem;
+    border-top: 1px solid rgba(149, 207, 224, 0.1);
+  }
+  .license-status { font-size: 0.5rem; }
   .research-node { grid-template-columns: 26px 34px minmax(0, 1fr); padding: 0.85rem; }
   .research-node strong { font-size: 0.83rem; }
   .research-node small { font-size: 0.68rem; }
@@ -1850,6 +2142,9 @@ html[data-theme="dark"] .future-body .navbar {
   .visitor-map-loading span,
   .visitor-map-shell::after,
   .future-hero h1 span,
+  .nen-active .hunter-license::after,
+  .nen-active .license-status-dot,
+  .nen-active .nen-aura span,
   .research-console.is-refreshing .console-status,
   .research-console.is-refreshing .console-number,
   .research-console.is-refreshing .console-prompt,
