@@ -15,7 +15,7 @@ latest_posts:
 <section class="future-hero" id="about" aria-labelledby="hero-title">
   <div class="hero-grid">
     <div class="hero-copy reveal" data-stagger>
-      <div class="signal-kicker"><span class="signal-dot" aria-hidden="true"></span> Open to research collaborations</div>
+      <div class="signal-kicker"><span class="signal-dot" aria-hidden="true"></span> Open × World expedition · collaborations welcome</div>
       <p class="hero-eyebrow">AGENTIC AI <span>/</span> GRAPH REASONING <span>/</span> SCIENTIFIC DISCOVERY</p>
       <h1 id="hero-title">Shuaicheng <span>Zhang</span></h1>
       <p class="hero-thesis">Building AI systems that reason over <em>structure, memory, and science.</em></p>
@@ -37,12 +37,12 @@ latest_posts:
       </div>
 
       <aside class="hunter-license" id="hunter-license" aria-label="Research Hunter license" data-tilt>
-        <div class="license-topline"><span>RESEARCH HUNTER LICENSE</span><span>NO. 2026-SZ</span></div>
+        <div class="license-topline"><span>OPEN × WORLD KNOWLEDGE LICENSE</span><span>NO. 2026-SZ</span></div>
         <div class="license-body">
           <div class="license-emblem" aria-hidden="true"><span>×</span><strong>SZ</strong></div>
-          <div class="license-identity"><span>LICENSED TO EXPLORE</span><strong>Shuaicheng Zhang</strong><small>Intelligent systems · open-world discovery</small></div>
+          <div class="license-identity"><span>LICENSED TO EXPLORE</span><strong>Shuaicheng Zhang</strong><small>Explore × reason × discover</small></div>
           <dl class="license-fields">
-            <div><dt>CLASS</dt><dd>Research Hunter</dd></div>
+            <div><dt>CLASS</dt><dd>Knowledge Hunter</dd></div>
             <div><dt>AFFINITY</dt><dd>Specialist</dd></div>
           </dl>
         </div>
@@ -67,6 +67,7 @@ latest_posts:
       <div class="floating-chip chip-trust"><i class="ti ti-shield-check" aria-hidden="true"></i> Reliable AI</div>
     </div>
   </div>
+  <img class="character-echo echo-gon" src="{{ '/assets/img/hunter-echoes/gon-open-world.webp' | relative_url }}" alt="" aria-hidden="true" decoding="async">
   <a class="scroll-cue" href="#research" aria-label="Scroll to research"><span>SCROLL TO DISCOVER</span><i class="ti ti-arrow-down" aria-hidden="true"></i></a>
 </section>
 
@@ -108,6 +109,7 @@ latest_posts:
       </div>
     </div>
   </div>
+  <img class="character-echo echo-killua" src="{{ '/assets/img/hunter-echoes/killua-reasoning.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
 </section>
 
 <section class="future-section journey-section" id="internship" aria-labelledby="journey-title">
@@ -218,6 +220,7 @@ latest_posts:
   <div class="publications reveal" data-stagger>
     {% bibliography %}
   </div>
+  <img class="character-echo echo-future-gon" src="{{ '/assets/img/hunter-echoes/future-gon-discovery.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
 </section>
 
 <section class="future-section cats-section" id="cats" aria-labelledby="cats-title">

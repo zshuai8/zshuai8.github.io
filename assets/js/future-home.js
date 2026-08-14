@@ -25,8 +25,14 @@
       (event) => {
         if (pointerFrame) cancelAnimationFrame(pointerFrame);
         pointerFrame = requestAnimationFrame(() => {
+          const horizontalShift = (event.clientX / window.innerWidth - 0.5) * 18;
+          const verticalShift = (event.clientY / window.innerHeight - 0.5) * 12;
           body.style.setProperty("--pointer-x", `${event.clientX}px`);
           body.style.setProperty("--pointer-y", `${event.clientY}px`);
+          body.style.setProperty("--hunter-shift-x", `${horizontalShift.toFixed(2)}px`);
+          body.style.setProperty("--hunter-shift-y", `${verticalShift.toFixed(2)}px`);
+          body.style.setProperty("--hunter-shift-x-reverse", `${(-horizontalShift).toFixed(2)}px`);
+          body.style.setProperty("--hunter-shift-y-reverse", `${(-verticalShift).toFixed(2)}px`);
         });
       },
       { passive: true },

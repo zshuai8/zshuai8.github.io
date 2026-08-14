@@ -20,6 +20,10 @@ body.future-body {
   --hero-parallax: 0px;
   --hero-watermark-y: 0px;
   --hero-watermark-r: 0deg;
+  --hunter-shift-x: 0px;
+  --hunter-shift-y: 0px;
+  --hunter-shift-x-reverse: 0px;
+  --hunter-shift-y-reverse: 0px;
   --global-bg-color: var(--future-bg);
   --global-card-bg-color: var(--future-surface-solid);
   --global-text-color: var(--future-ink);
@@ -846,11 +850,88 @@ html[data-theme="dark"] .future-body .navbar {
   animation: arrow-bob 1.8s ease-in-out infinite;
 }
 
+.hero-grid,
+.scroll-cue,
+.future-section > :not(.character-echo) {
+  z-index: 1;
+}
+
+.hero-grid,
+.future-section > :not(.character-echo) {
+  position: relative;
+}
+
+.character-echo {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  max-width: none;
+  height: auto;
+  opacity: 0.065;
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: multiply;
+  filter: saturate(0.72) contrast(0.96);
+  transform-origin: center;
+  transition: opacity 500ms ease, filter 500ms ease;
+  will-change: transform, translate, opacity;
+}
+
+html[data-theme="dark"] .character-echo {
+  opacity: 0.11;
+  mix-blend-mode: screen;
+  filter: saturate(0.9) brightness(0.86);
+}
+
+.echo-gon {
+  bottom: -8%;
+  left: -13%;
+  width: clamp(250px, 28vw, 410px);
+  translate: var(--hunter-shift-x) var(--hunter-shift-y);
+  animation: gon-explores 14s ease-in-out infinite alternate;
+}
+
+.echo-killua {
+  top: 8%;
+  right: -18%;
+  width: clamp(410px, 54vw, 740px);
+  translate: var(--hunter-shift-x-reverse) var(--hunter-shift-y);
+  animation: killua-reasons 11s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
+}
+
+.echo-future-gon {
+  top: 2%;
+  right: -14%;
+  width: clamp(310px, 37vw, 520px);
+  opacity: 0.045;
+  translate: var(--hunter-shift-x) var(--hunter-shift-y-reverse);
+  animation: future-gon-discovers 9s ease-in-out infinite alternate;
+}
+
+html[data-theme="dark"] .echo-future-gon {
+  opacity: 0.085;
+}
+
+.nen-active .character-echo {
+  opacity: 0.14;
+  filter: saturate(1) contrast(1.03) drop-shadow(0 0 24px rgba(84, 201, 107, 0.18));
+}
+
+.nen-active .echo-killua {
+  opacity: 0.15;
+  filter: saturate(1) drop-shadow(0 0 26px rgba(89, 230, 244, 0.22));
+}
+
+.nen-active .echo-future-gon {
+  opacity: 0.11;
+}
+
 .future-section {
   position: relative;
   padding: clamp(5rem, 10vw, 8.5rem) 0;
   border-top: 1px solid var(--future-line);
   scroll-margin-top: 66px;
+  isolation: isolate;
 }
 
 .future-section::before {
@@ -1950,6 +2031,24 @@ html[data-theme="dark"] .future-body .navbar {
   to { transform: rotate(8deg) scale(1.04); opacity: 1; }
 }
 
+@keyframes gon-explores {
+  0% { transform: translate3d(-10px, 12px, 0) rotate(-3deg) scale(0.97); }
+  48% { transform: translate3d(12px, -10px, 0) rotate(1deg) scale(1.015); }
+  100% { transform: translate3d(28px, -18px, 0) rotate(3deg) scale(1.03); }
+}
+
+@keyframes killua-reasons {
+  0%, 16% { transform: translate3d(34px, 4px, 0) rotate(1deg); }
+  45% { transform: translate3d(-18px, -7px, 0) rotate(-1.5deg); }
+  58% { transform: translate3d(-34px, 2px, 0) rotate(-2deg); }
+  100% { transform: translate3d(12px, -10px, 0) rotate(0.5deg); }
+}
+
+@keyframes future-gon-discovers {
+  from { transform: translate3d(0, 16px, 0) scale(0.985); }
+  to { transform: translate3d(-8px, -14px, 0) scale(1.025); }
+}
+
 @keyframes signal-pulse {
   0%, 100% { opacity: 0.65; transform: scale(0.9); }
   50% { opacity: 1; transform: scale(1.08); }
@@ -2084,6 +2183,10 @@ html[data-theme="dark"] .future-body .navbar {
 
   .visitor-console-grid { grid-template-columns: 1fr; }
   .visitor-map-shell { min-height: 250px; }
+
+  .echo-gon { left: -22%; width: 330px; }
+  .echo-killua { right: -28%; width: 520px; }
+  .echo-future-gon { right: -24%; width: 400px; }
 }
 
 @media (max-width: 575px) {
@@ -2104,6 +2207,14 @@ html[data-theme="dark"] .future-body .navbar {
     border-top: 1px solid rgba(149, 207, 224, 0.1);
   }
   .license-status { font-size: 0.5rem; }
+  .character-echo { opacity: 0.045; }
+  html[data-theme="dark"] .character-echo { opacity: 0.075; }
+  .echo-gon { bottom: -2%; left: -42%; width: 290px; }
+  .echo-killua { top: 17%; right: -58%; width: 420px; }
+  .echo-future-gon { top: 4%; right: -52%; width: 330px; }
+  .nen-active .character-echo { opacity: 0.1; }
+  .nen-active .echo-killua { opacity: 0.11; }
+  .nen-active .echo-future-gon { opacity: 0.085; }
   .research-node { grid-template-columns: 26px 34px minmax(0, 1fr); padding: 0.85rem; }
   .research-node strong { font-size: 0.83rem; }
   .research-node small { font-size: 0.68rem; }
@@ -2145,6 +2256,7 @@ html[data-theme="dark"] .future-body .navbar {
   .nen-active .hunter-license::after,
   .nen-active .license-status-dot,
   .nen-active .nen-aura span,
+  .character-echo,
   .research-console.is-refreshing .console-status,
   .research-console.is-refreshing .console-number,
   .research-console.is-refreshing .console-prompt,
@@ -2167,5 +2279,6 @@ html[data-theme="dark"] .future-body .navbar {
   }
   .future-hero::after { transform: none; transition: none; }
   .future-section::before { opacity: 0.45; transform: scaleX(1); }
+  .character-echo { translate: 0 0; transition: none; }
   [data-tilt] { transform: none !important; }
 }
