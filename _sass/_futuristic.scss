@@ -1433,6 +1433,10 @@ html[data-theme="dark"] .future-body .navbar {
   font-size: inherit;
 }
 
+.visitor-console-code {
+  color: #8397af;
+}
+
 .visitor-live-dot {
   width: 7px;
   height: 7px;
@@ -1488,6 +1492,10 @@ html[data-theme="dark"] .future-body .navbar {
 .visitor-status i {
   color: #59e6f4;
   font-size: 1rem;
+}
+
+.visitor-status span {
+  color: #a8bacd;
 }
 
 .visitor-map-shell {
