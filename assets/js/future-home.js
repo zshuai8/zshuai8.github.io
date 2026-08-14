@@ -4,6 +4,20 @@
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  if (!reducedMotion) body.classList.add("motion-ready");
+
+  document.querySelectorAll("[data-stagger], .section-heading.reveal").forEach((group) => {
+    Array.from(group.children).forEach((child, index) => {
+      child.style.setProperty("--stagger-index", index);
+    });
+  });
+
+  document.querySelectorAll(".publications ol.bibliography").forEach((list, listIndex) => {
+    Array.from(list.children).forEach((item, itemIndex) => {
+      item.style.setProperty("--stagger-index", listIndex * 2 + itemIndex + 1);
+    });
+  });
+
   if (!reducedMotion) {
     let pointerFrame;
     window.addEventListener(
@@ -37,6 +51,7 @@
   }
 
   const researchNodes = document.querySelectorAll("[data-research-node]");
+  const researchConsole = document.querySelector(".research-console");
   const detailIndex = document.getElementById("research-detail-index");
   const detailKicker = document.getElementById("research-detail-kicker");
   const detailTitle = document.getElementById("research-detail-title");
@@ -55,8 +70,62 @@
       if (detailKicker) detailKicker.textContent = node.dataset.kicker;
       if (detailTitle) detailTitle.textContent = node.dataset.title;
       if (detailCopy) detailCopy.textContent = node.dataset.copy;
+
+      if (!reducedMotion && researchConsole) {
+        researchConsole.classList.remove("is-refreshing");
+        void researchConsole.offsetWidth;
+        researchConsole.classList.add("is-refreshing");
+        window.setTimeout(() => researchConsole.classList.remove("is-refreshing"), 520);
+      }
     });
   });
+
+  const futureSections = document.querySelectorAll(".future-section");
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    futureSections.forEach((section) => section.classList.add("is-in-view"));
+  } else {
+    const sectionMotionObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in-view");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -18%" },
+    );
+    futureSections.forEach((section) => sectionMotionObserver.observe(section));
+  }
+
+  if (!reducedMotion) {
+    const hero = document.querySelector(".future-hero");
+    const desktopMotion = window.matchMedia("(min-width: 768px)");
+    let scrollFrame;
+
+    const updateHeroMotion = () => {
+      scrollFrame = null;
+      if (!hero || !desktopMotion.matches) {
+        body.style.setProperty("--hero-parallax", "0px");
+        body.style.setProperty("--hero-watermark-y", "0px");
+        body.style.setProperty("--hero-watermark-r", "0deg");
+        return;
+      }
+
+      const progress = Math.min(Math.max(window.scrollY / Math.max(hero.offsetHeight, 1), 0), 1);
+      body.style.setProperty("--hero-parallax", `${(progress * 24).toFixed(2)}px`);
+      body.style.setProperty("--hero-watermark-y", `${(-progress * 34).toFixed(2)}px`);
+      body.style.setProperty("--hero-watermark-r", `${(-progress * 2).toFixed(2)}deg`);
+    };
+
+    const queueHeroMotion = () => {
+      if (scrollFrame) return;
+      scrollFrame = requestAnimationFrame(updateHeroMotion);
+    };
+
+    updateHeroMotion();
+    window.addEventListener("scroll", queueHeroMotion, { passive: true });
+    window.addEventListener("resize", queueHeroMotion, { passive: true });
+  }
 
   if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
     document.querySelectorAll("[data-tilt]").forEach((element) => {
@@ -110,5 +179,26 @@
       if (opening && frame && !frame.src) frame.src = frame.dataset.src;
       if (opening) cvPreview.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "nearest" });
     });
+  }
+
+  const visitorMap = document.querySelector("[data-visitor-map]");
+  if (visitorMap) {
+    const markMapReady = () => {
+      const embeddedMap = visitorMap.querySelector("#mapmyvisitors-widget");
+      if (!embeddedMap) return false;
+
+      visitorMap.classList.add("is-map-ready");
+      const loadingState = visitorMap.querySelector("[data-map-loading]");
+      if (loadingState) loadingState.setAttribute("aria-hidden", "true");
+      return true;
+    };
+
+    if (!markMapReady() && "MutationObserver" in window) {
+      const mapObserver = new MutationObserver(() => {
+        if (!markMapReady()) return;
+        mapObserver.disconnect();
+      });
+      mapObserver.observe(visitorMap, { childList: true, subtree: true });
+    }
   }
 })();

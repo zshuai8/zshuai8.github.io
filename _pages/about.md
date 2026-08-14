@@ -14,7 +14,7 @@ latest_posts:
 
 <section class="future-hero" id="about" aria-labelledby="hero-title">
   <div class="hero-grid">
-    <div class="hero-copy reveal">
+    <div class="hero-copy reveal" data-stagger>
       <div class="signal-kicker"><span class="signal-dot" aria-hidden="true"></span> Open to research collaborations</div>
       <p class="hero-eyebrow">AGENTIC AI <span>/</span> GRAPH REASONING <span>/</span> SCIENTIFIC DISCOVERY</p>
       <h1 id="hero-title">Shuaicheng <span>Zhang</span></h1>
@@ -62,8 +62,8 @@ latest_posts:
     <p>I work across agentic systems, memory, graphs, multimodal foundations, and real-world deployment. Select a research vector to inspect the idea behind it.</p>
   </div>
 
-  <div class="research-interface reveal">
-    <div class="research-node-grid" role="list" aria-label="Research areas">
+  <div class="research-interface reveal" data-stagger>
+    <div class="research-node-grid" role="list" aria-label="Research areas" data-stagger>
       <button class="research-node is-active" type="button" role="listitem" data-research-node data-index="01" data-kicker="PLANNING / TOOL USE" data-title="Agentic AI systems" data-copy="I design agents that plan, use tools, coordinate structured reasoning, and act on complex evidence rather than producing isolated predictions.">
         <span class="node-index">01</span><i class="ti ti-sparkles" aria-hidden="true"></i><strong>Agentic AI systems</strong><small>Planning, tool use &amp; structured reasoning</small>
       </button>
@@ -102,7 +102,7 @@ latest_posts:
     <p>Five teams, five different views of how ideas become systems.</p>
   </div>
 
-  <div class="experience-rail reveal">
+  <div class="experience-rail reveal" data-stagger>
     <article class="experience-card" data-tilt>
       <div class="experience-year">2026</div>
       <img src="{{ '/assets/img/logos/ornl.png' | relative_url }}" alt="Oak Ridge National Laboratory logo" loading="lazy">
@@ -142,7 +142,7 @@ latest_posts:
     <h2 id="news-title">What’s happening now.</h2>
   </div>
 
-  <div class="news-grid reveal">
+  <div class="news-grid reveal" data-stagger>
     <article class="news-feature news-cyan">
       <div class="news-meta"><time datetime="2026-08">AUG 2026</time><span>NEW</span></div>
       <h3>AgentPDM accepted to CIKM 2026</h3>
@@ -163,7 +163,7 @@ latest_posts:
     </article>
   </div>
 
-  <div class="signal-timeline reveal">
+  <div class="signal-timeline reveal" data-stagger>
     <div class="timeline-row"><time datetime="2026-05">05 / 2026</time><span></span><p>Passed my final defense and officially became Dr. Shuaicheng Zhang.</p></div>
     <div class="timeline-row"><time datetime="2026-04">04 / 2026</time><span></span><p>Presented an agentic co-design system for hypothesis generation in SNN design at the Virginia Tech SNN Group.</p></div>
     <div class="timeline-row"><time datetime="2026-01">01 / 2026</time><span></span><p>Gave an invited talk at Microsoft Research on open-world graph learning.</p></div>
@@ -200,7 +200,7 @@ latest_posts:
     <h2 id="papers-title">Ideas, tested and shared.</h2>
     <p>Research spanning graph learning, reliable forecasting, agentic reasoning, and real-world decision systems. Open any overview for the short version.</p>
   </div>
-  <div class="publications reveal">
+  <div class="publications reveal" data-stagger>
     {% bibliography %}
   </div>
 </section>
@@ -212,7 +212,7 @@ latest_posts:
     <p>Jojo and Joy specialize in comfort, supervision, and strategically timed keyboard interruptions.</p>
   </div>
 
-  <div class="cat-grid reveal">
+  <div class="cat-grid reveal" data-stagger>
     <figure class="cat-card cat-card-wide" data-tilt>
       <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo relaxing in a favorite spot" loading="lazy">
       <figcaption><span>JOJO</span><strong>Chief Comfort Officer</strong></figcaption>
@@ -233,7 +233,7 @@ latest_posts:
 </section>
 
 <section class="future-section cv-section" id="cv" aria-labelledby="cv-title">
-  <div class="cv-command reveal">
+  <div class="cv-command reveal" data-stagger>
     <div>
       <p class="section-index">06 / COMPLETE RECORD</p>
       <h2 id="cv-title">Want the full trajectory?</h2>
@@ -246,6 +246,39 @@ latest_posts:
   </div>
   <div class="cv-preview" id="cv-preview" hidden>
     <iframe title="Shuaicheng Zhang curriculum vitae" data-src="{{ '/assets/pdf/cv.pdf' | relative_url }}"></iframe>
+  </div>
+</section>
+
+<section class="future-section visitors-section" id="visitors" aria-labelledby="visitors-title">
+  <div class="section-heading compact reveal">
+    <p class="section-index">07 / GLOBAL SIGNAL</p>
+    <h2 id="visitors-title">A world of curious minds.</h2>
+    <p>The live visitor map is back—quietly tracing how ideas travel across borders, time zones, and research communities.</p>
+  </div>
+
+  <div class="visitor-console reveal" data-stagger data-visitor-map>
+    <div class="visitor-console-head">
+      <div class="visitor-console-title"><span class="visitor-live-dot" aria-hidden="true"></span><strong>LIVE VISITOR TELEMETRY</strong></div>
+      <div class="visitor-console-code">GEO / WORLD / ACTIVE</div>
+    </div>
+    <div class="visitor-console-grid">
+      <div class="visitor-copy">
+        <p class="mono-label">GLOBAL REACH</p>
+        <h3>Every visit adds another point to the constellation.</h3>
+        <p>This map uses the original tracker from this site, preserving its visitor history while giving it a new home in the redesigned interface.</p>
+        <div class="visitor-status"><i class="ti ti-world" aria-hidden="true"></i><span>Signals received worldwide</span></div>
+      </div>
+      <div class="visitor-map-shell">
+        <div class="visitor-map-loading" data-map-loading role="status">
+          <span></span>
+          <p>Connecting to global signal…</p>
+        </div>
+        <!-- MapMyVisitors Widget BEGIN -->
+        <script defer type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
+        <!-- MapMyVisitors Widget END -->
+        <noscript><p class="visitor-map-fallback">Enable JavaScript to view the live visitor map.</p></noscript>
+      </div>
+    </div>
   </div>
 </section>
 

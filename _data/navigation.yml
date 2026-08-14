@@ -25,3 +25,7 @@
 - title: CV
   url: "#cv"
   nav_order: 7
+
+- title: Map
+  url: "#visitors"
+  nav_order: 8
