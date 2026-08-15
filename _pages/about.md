@@ -68,8 +68,16 @@ latest_posts:
     </div>
   </div>
   <img class="character-echo echo-gon" src="{{ '/assets/img/hunter-echoes/gon-open-world.webp' | relative_url }}" alt="" aria-hidden="true" decoding="async">
+  <div class="character-caption caption-gon" aria-hidden="true"><span>01 / EXPLORE</span><strong>Chase the unknown.</strong></div>
   <a class="scroll-cue" href="#research" aria-label="Scroll to research"><span>SCROLL TO DISCOVER</span><i class="ti ti-arrow-down" aria-hidden="true"></i></a>
 </section>
+
+<div class="expedition-marquee" aria-hidden="true">
+  <div class="expedition-marquee-track">
+    <span>OPEN × WORLD</span><i>REASON BEYOND THE KNOWN</i><span>EXPLORE × REASON × DISCOVER</span><i>INTELLIGENCE FOR THE UNCHARTED</i>
+    <span>OPEN × WORLD</span><i>REASON BEYOND THE KNOWN</i><span>EXPLORE × REASON × DISCOVER</span><i>INTELLIGENCE FOR THE UNCHARTED</i>
+  </div>
+</div>
 
 <section class="future-section research-section" id="research" aria-labelledby="research-title">
   <div class="section-heading reveal">
@@ -110,6 +118,7 @@ latest_posts:
     </div>
   </div>
   <img class="character-echo echo-killua" src="{{ '/assets/img/hunter-echoes/killua-reasoning.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <div class="character-caption caption-killua" aria-hidden="true"><span>02 / REASON</span><strong>Move at the speed of thought.</strong></div>
 </section>
 
 <section class="future-section journey-section" id="internship" aria-labelledby="journey-title">
@@ -221,6 +230,7 @@ latest_posts:
     {% bibliography %}
   </div>
   <img class="character-echo echo-future-gon" src="{{ '/assets/img/hunter-echoes/future-gon-discovery.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <div class="character-caption caption-future" aria-hidden="true"><span>03 / EVOLVE</span><strong>Grow beyond the closed world.</strong></div>
 </section>
 
 <section class="future-section cats-section" id="cats" aria-labelledby="cats-title">

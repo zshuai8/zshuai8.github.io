@@ -25,8 +25,8 @@
       (event) => {
         if (pointerFrame) cancelAnimationFrame(pointerFrame);
         pointerFrame = requestAnimationFrame(() => {
-          const horizontalShift = (event.clientX / window.innerWidth - 0.5) * 18;
-          const verticalShift = (event.clientY / window.innerHeight - 0.5) * 12;
+          const horizontalShift = (event.clientX / window.innerWidth - 0.5) * 42;
+          const verticalShift = (event.clientY / window.innerHeight - 0.5) * 28;
           body.style.setProperty("--pointer-x", `${event.clientX}px`);
           body.style.setProperty("--pointer-y", `${event.clientY}px`);
           body.style.setProperty("--hunter-shift-x", `${horizontalShift.toFixed(2)}px`);
@@ -119,6 +119,7 @@
 
   if (!reducedMotion) {
     const hero = document.querySelector(".future-hero");
+    const characterEchoes = Array.from(document.querySelectorAll(".character-echo"));
     const desktopMotion = window.matchMedia("(min-width: 768px)");
     let scrollFrame;
 
@@ -128,6 +129,7 @@
         body.style.setProperty("--hero-parallax", "0px");
         body.style.setProperty("--hero-watermark-y", "0px");
         body.style.setProperty("--hero-watermark-r", "0deg");
+        characterEchoes.forEach((echo) => echo.style.setProperty("--echo-scroll", "0px"));
         return;
       }
 
@@ -135,6 +137,16 @@
       body.style.setProperty("--hero-parallax", `${(progress * 24).toFixed(2)}px`);
       body.style.setProperty("--hero-watermark-y", `${(-progress * 34).toFixed(2)}px`);
       body.style.setProperty("--hero-watermark-r", `${(-progress * 2).toFixed(2)}deg`);
+
+      characterEchoes.forEach((echo) => {
+        const stage = echo.closest(".future-hero, .future-section");
+        if (!stage) return;
+        const bounds = stage.getBoundingClientRect();
+        const stageCenter = bounds.top + bounds.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const distance = Math.max(-1, Math.min(1, (stageCenter - viewportCenter) / window.innerHeight));
+        echo.style.setProperty("--echo-scroll", `${(-distance * 42).toFixed(2)}px`);
+      });
     };
 
     const queueHeroMotion = () => {
