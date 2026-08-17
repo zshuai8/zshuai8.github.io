@@ -30,6 +30,16 @@ latest_posts:
         <a class="future-button future-button-icon" href="mailto:zshuai8@vt.edu" aria-label="Email Shuaicheng Zhang"><i class="ti ti-mail" aria-hidden="true"></i></a>
       </div>
 
+      <div class="hero-profile-links" aria-label="Professional profiles">
+        <span>CONNECT / DISCOVER</span>
+        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">
+          <i class="ti ti-brand-linkedin" aria-hidden="true"></i><strong>LinkedIn</strong><i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
+          <i class="ai ai-google-scholar" aria-hidden="true"></i><strong>Google Scholar</strong><i class="ti ti-arrow-up-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
       <div class="hero-signals" aria-label="Highlights">
         <div><span>Ph.D. · 2026</span><strong>Virginia Tech</strong></div>
         <div><span>Next chapter</span><strong>LinkedIn AI Engineer</strong></div>
