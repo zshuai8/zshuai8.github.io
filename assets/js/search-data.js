@@ -102,7 +102,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/shuaicheng-zhang-573368118# your LinkedIn user name", "_blank");
+          window.open("https://www.linkedin.com/in/shuaicheng-zhang-573368118", "_blank");
         },
       },{
         id: 'social-scholar',
