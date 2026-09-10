@@ -22,10 +22,9 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
       </div>
     </div>
     <figure class="hero-portrait">
-      <div class="portrait-halo" aria-hidden="true"></div>
+      <div class="portrait-light" aria-hidden="true"></div>
       <div class="portrait-frame">{% include cinematic-image.liquid path="/assets/img/profile-2026.png" alt="Shuaicheng Zhang" width=1122 height=1402 loading="eager" sizes="(min-width: 1600px) 390px, (min-width: 841px) 350px, 290px" %}</div>
-      <figcaption><span class="portrait-caption-line"></span><span>A little curiosity.<br>A world of possibility.</span></figcaption>
-      <span class="portrait-note" aria-hidden="true">OPEN × WORLD / 2026</span>
+      <figcaption>Hi, I’m Shuaicheng.</figcaption>
     </figure>
   </div>
   <div class="hero-bottom section-shell"><span>Curiosity. Evidence. Impact.</span><a href="#beyond">An Open × World journey <span aria-hidden="true">↓</span></a></div>

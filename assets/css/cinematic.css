@@ -435,64 +435,35 @@ html[data-motion="off"] .play-icon {
 .portrait-frame {
   position: relative;
   overflow: hidden;
-  border-radius: 180px 180px 30px 30px;
-  border: 1px solid #ffffff29;
-  background: #cdcccb;
+  border-radius: 28px;
+  border: 1px solid #fff4e638;
+  background: #ece7e0;
   box-shadow:
-    0 20px 100px #00000070,
-    0 0 60px #2b69c91c;
-}
-.portrait-frame::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: linear-gradient(180deg, #28303d0d 65%, #080c1445);
-  pointer-events: none;
+    0 16px 40px #020a1726,
+    0 0 50px #ffcd8b0a;
 }
 .portrait-frame img {
   width: 100%;
   aspect-ratio: 0.8;
   object-fit: cover;
-  filter: saturate(0.58) contrast(1.035);
+  filter: none;
 }
-.portrait-halo {
+.portrait-light {
   position: absolute;
-  inset: -55px -45px;
-  border: 1px solid #7eafff2d;
-  border-radius: 50%;
-  transform: rotate(-20deg);
-  box-shadow: 0 0 50px #3682fb0a;
-}
-.portrait-halo::after {
-  content: "";
-  position: absolute;
-  inset: -30px -8px;
-  border-radius: 50%;
-  border: 1px solid #7eafff10;
+  z-index: -1;
+  inset: -36px -40px;
+  border-radius: 40px;
+  background: radial-gradient(ellipse at 65% 30%, #ffc98738, transparent 66%), radial-gradient(ellipse at 30% 75%, #73b8ff20, transparent 65%);
+  filter: blur(36px);
+  pointer-events: none;
 }
 .hero-portrait figcaption {
-  margin-top: 25px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 13px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   line-height: 1.5;
-  color: #8f9bac;
-}
-.portrait-caption-line {
-  display: block;
-  width: 36px;
-  height: 1px;
-  background: #50627a;
-}
-.portrait-note {
-  position: absolute;
-  right: -36px;
-  top: 25%;
-  writing-mode: vertical-rl;
-  color: #7d8ba2;
-  font-size: 10px;
-  letter-spacing: 0.15em;
+  color: #f5e7d8;
 }
 .hero-bottom {
   position: relative;
@@ -1532,9 +1503,6 @@ html[data-motion="off"] .reveal {
   .hero-description {
     font-size: 21px;
   }
-  .portrait-note {
-    right: -23px;
-  }
   .hero-actions {
     gap: 18px;
   }
@@ -1630,11 +1598,11 @@ html[data-motion="off"] .reveal {
   .hero-portrait {
     width: 245px;
   }
-  .portrait-halo {
+  .portrait-light {
     inset: -30px -20px;
   }
   .portrait-frame {
-    border-radius: 130px 130px 24px 24px;
+    border-radius: 24px;
   }
   .hero-description {
     font-size: 19px;
@@ -1817,12 +1785,6 @@ html[data-motion="off"] .reveal {
   .hero-portrait {
     width: min(76%, 290px);
     margin: 0 auto;
-  }
-  .hero-portrait figcaption {
-    font-size: 12px;
-  }
-  .portrait-note {
-    right: -28px;
   }
   .hero-bottom {
     padding: 19px 0 22px;
