@@ -1235,6 +1235,7 @@ details[open] > summary .expand-sign {
   width: 100%;
   height: 475px;
   object-fit: cover;
+  object-position: center top;
   transition: transform 1s var(--ease);
 }
 .cat-photo:hover img {

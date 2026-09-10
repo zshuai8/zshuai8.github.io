@@ -14,7 +14,7 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
       <h1 id="hero-title">Exploring an<br><em>open world.</em></h1>
       <p class="hero-description">I build AI systems that connect<br class="desktop-break"> structure, context, and evidence.</p>
       <p class="hero-affiliation">AI Engineer at <strong>LinkedIn.</strong><br>Ph.D. in Computer Science, <strong>Virginia Tech.</strong></p>
-      <div class="hero-actions"><a class="button button-blue" href="#publications">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link light-link" href="#research">Meet the researcher <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-actions"><a class="button button-blue" href="#beyond">Enter the story <span aria-hidden="true">↓</span></a><a class="text-link light-link" href="#publications">Go straight to the research <span aria-hidden="true">↗</span></a></div>
       <div class="profile-links" aria-label="Professional profiles">
         <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
         <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
@@ -28,12 +28,15 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
       <span class="portrait-note" aria-hidden="true">OPEN × WORLD / 2026</span>
     </figure>
   </div>
-  <div class="hero-bottom section-shell"><span>Research. Build. Explore.</span><a href="#research">Keep exploring <span aria-hidden="true">↓</span></a></div>
+  <div class="hero-bottom section-shell"><span>Curiosity. Evidence. Impact.</span><a href="#beyond">An Open × World journey <span aria-hidden="true">↓</span></a></div>
 </section>
+
+{% assign curiosity_chapter = site.data.world_chapters[0] %}
+{% include world-chapter.liquid chapter=curiosity_chapter %}
 
 <section class="research-section section-space" id="research" aria-labelledby="research-title">
   <div class="section-shell">
-    <div class="section-heading reveal"><p class="eyebrow">The work</p><h2 id="research-title">From better models.<br><span class="muted">To useful systems.</span></h2></div>
+    <div class="section-heading reveal"><p class="eyebrow">Field notes / 01 · Curiosity</p><h2 id="research-title">From better models.<br><span class="muted">To useful systems.</span></h2></div>
     <div class="research-intro reveal"><p>My work connects agentic reasoning, graph learning, and reliable AI. I’m interested in how models use structure and context to make sense of an open, changing world.</p><p>I completed my Ph.D. at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. At LinkedIn, I bring that research depth to modeling and systems at scale.</p></div>
     <div class="research-explorer reveal">
       <div class="research-options" role="group" aria-label="Explore research areas">
@@ -54,9 +57,12 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
   </div>
 </section>
 
+{% assign evidence_chapter = site.data.world_chapters[1] %}
+{% include world-chapter.liquid chapter=evidence_chapter %}
+
 <section class="publications-section section-space" id="publications" aria-labelledby="papers-title">
   <div class="section-shell">
-    <div class="heading-with-link reveal"><div class="section-heading"><p class="eyebrow">Selected research</p><h2 id="papers-title">Ideas, put to the test.</h2></div><a class="text-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div>
+    <div class="heading-with-link reveal"><div class="section-heading"><p class="eyebrow">Field notes / 02 · Evidence</p><h2 id="papers-title">Ideas, put to the test.</h2></div><a class="text-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div>
     <div class="featured-papers">
       <article class="paper-feature reveal">
         <div class="paper-feature-copy"><p class="paper-meta">TMLR 2026 <span>Published</span></p><h3>CAPTAIN<span class="paper-title-period">.</span></h3><p class="paper-deck">Forecasts with a fuller<br>picture of uncertainty.</p><p class="paper-description">A framework that models uncertainty within sources, across sources, and over time, bringing conformal prediction to multi-source time-series forecasting.</p><div class="paper-feature-links"><a href="https://openreview.net/forum?id=WJjlXHo4yS" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a><a href="https://github.com/zshuai8/2026-TMLR-CAPTAIN" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div></div>
@@ -104,9 +110,12 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
   </div>
 </section>
 
+{% assign impact_chapter = site.data.world_chapters[2] %}
+{% include world-chapter.liquid chapter=impact_chapter %}
+
 <section class="journey-section section-space" id="internship" aria-labelledby="journey-title">
   <div class="section-shell journey-grid">
-    <div class="journey-heading section-heading reveal"><p class="eyebrow">The journey</p><h2 id="journey-title">Different teams.<br><span class="muted">A wider lens.</span></h2><p class="section-description">Each chapter has shaped how I think about research, collaboration, and building things that matter.</p><a class="text-link" href="#cv">View my CV <span aria-hidden="true">↗</span></a></div>
+    <div class="journey-heading section-heading reveal"><p class="eyebrow">Field notes / 03 · Impact</p><h2 id="journey-title">Different teams.<br><span class="muted">A wider lens.</span></h2><p class="section-description">Each chapter has shaped how I think about research, collaboration, and building things that matter.</p><a class="text-link" href="#cv">View my CV <span aria-hidden="true">↗</span></a></div>
     <div class="experience-list">
       <article class="experience-item experience-current reveal"><span class="experience-year">Now</span><div class="experience-logo linkedin-logo" aria-hidden="true">in</div><div><h3>LinkedIn</h3><p>AI Engineer</p><span>Modeling · Intelligence at scale</span></div></article>
       <article class="experience-item reveal"><span class="experience-year">2026</span><img class="experience-logo" src="{{ '/assets/img/logos/ornl.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Oak Ridge National Laboratory</h3><p>Research Intern</p><span>GraphRAG for scientific discovery</span></div></article>
@@ -114,18 +123,6 @@ description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Te
       <article class="experience-item reveal"><span class="experience-year">2023</span><img class="experience-logo" src="{{ '/assets/img/logos/ibm.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>MIT–IBM Watson AI Lab</h3><p>Research Intern</p><span>Deep graph generative models</span></div></article>
       <article class="experience-item reveal"><span class="experience-year">2021</span><img class="experience-logo" src="{{ '/assets/img/logos/deloitte.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Deloitte AI</h3><p>NLP Research Intern</p><span>Natural language processing</span></div></article>
       <article class="experience-item reveal"><span class="experience-year">2017</span><img class="experience-logo" src="{{ '/assets/img/logos/hundsun.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Hundsun Technologies</h3><p>Software Engineer Intern</p><span>Trust systems engineering</span></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="hunter-section dark-stage" id="beyond" aria-labelledby="hunter-title">
-  <div class="hunter-ambient" aria-hidden="true"></div>
-  <div class="section-shell">
-    <div class="hunter-heading reveal"><p class="eyebrow">Beyond the research</p><h2 id="hunter-title">Stay curious.<br><em>Go beyond.</em></h2><p>A lifelong Hunter × Hunter fan.<br>Still exploring an <strong>Open × World</strong> of knowledge.</p><button class="button button-glass" type="button" data-nen-toggle aria-pressed="false" aria-controls="hunter-characters"><span class="nen-symbol" aria-hidden="true">念</span><span data-nen-label>Activate Nen</span></button></div>
-    <div class="hunter-characters" id="hunter-characters">
-      <figure class="hunter-character character-gon"><img src="{{ '/assets/img/hunter-echoes/gon-open-world.webp' | relative_url }}" alt="Gon Freecss surrounded by green energy" loading="lazy" width="600" height="800"><figcaption><span>01 / Curiosity</span><strong>Chase the unknown.</strong><small>Gon</small></figcaption></figure>
-      <figure class="hunter-character character-killua"><img src="{{ '/assets/img/hunter-echoes/killua-reasoning.webp' | relative_url }}" alt="Killua Zoldyck surrounded by blue electricity" loading="lazy" width="600" height="800"><figcaption><span>02 / Possibility</span><strong>Find your own path.</strong><small>Killua</small></figcaption></figure>
-      <figure class="hunter-character character-future"><img src="{{ '/assets/img/hunter-echoes/future-gon-discovery.webp' | relative_url }}" alt="Future Gon with his towering silhouette" loading="lazy" width="600" height="800"><figcaption><span>03 / Growth</span><strong>Beyond your limits.</strong><small>Future Gon</small></figcaption></figure>
     </div>
   </div>
 </section>

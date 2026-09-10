@@ -167,13 +167,6 @@
     });
   });
 
-  const nenButton = document.querySelector("[data-nen-toggle]");
-  nenButton?.addEventListener("click", () => {
-    const active = document.querySelector(".hunter-section").classList.toggle("nen-active");
-    nenButton.setAttribute("aria-pressed", String(active));
-    document.querySelector("[data-nen-label]").textContent = active ? "Nen activated" : "Activate Nen";
-  });
-
   document.querySelector("[data-cv-toggle]")?.addEventListener("click", (event) => {
     const button = event.currentTarget;
     const preview = document.getElementById("cv-preview");
@@ -214,10 +207,10 @@
           target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
         }
         target.focus({ preventScroll: true });
-        target.scrollIntoView({
-          behavior: canAnimate() ? "smooth" : "auto",
-          block: "start",
-        });
+        const behavior = canAnimate() ? "smooth" : "auto";
+        if (target.matches("[data-story-chapter]")) {
+          window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top, behavior });
+        } else target.scrollIntoView({ behavior, block: "start" });
       });
   }
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
