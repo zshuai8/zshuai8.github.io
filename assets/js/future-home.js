@@ -35,7 +35,7 @@
           body.style.setProperty("--hunter-shift-y-reverse", `${(-verticalShift).toFixed(2)}px`);
         });
       },
-      { passive: true },
+      { passive: true }
     );
   }
 
@@ -51,7 +51,7 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8%" },
+      { threshold: 0.12, rootMargin: "0px 0px -8%" }
     );
     revealElements.forEach((element) => revealObserver.observe(element));
   }
@@ -112,7 +112,7 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -18%" },
+      { threshold: 0.08, rootMargin: "0px 0px -18%" }
     );
     futureSections.forEach((section) => sectionMotionObserver.observe(section));
   }
@@ -177,23 +177,19 @@
   }
 
   const navigationItems = Array.from(document.querySelectorAll('#navbar a.nav-link[href^="#"]'));
-  const observedSections = navigationItems
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+  const observedSections = navigationItems.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 
   if ("IntersectionObserver" in window && observedSections.length) {
     const sectionObserver = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (!visible) return;
 
         navigationItems.forEach((link) => {
           link.parentElement.classList.toggle("section-active", link.getAttribute("href") === `#${visible.target.id}`);
         });
       },
-      { rootMargin: "-25% 0px -58%", threshold: [0, 0.2, 0.5] },
+      { rootMargin: "-25% 0px -58%", threshold: [0, 0.2, 0.5] }
     );
     observedSections.forEach((section) => sectionObserver.observe(section));
   }
