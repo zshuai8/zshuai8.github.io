@@ -1,323 +1,157 @@
 ---
-layout: about
+layout: cinematic
 title: Shuaicheng Zhang
 permalink: /
-futuristic_home: true
-profile: false
-selected_papers: false
-social: false
-announcements:
-  enabled: false
-latest_posts:
-  enabled: false
+description: AI Engineer at LinkedIn and Computer Science Ph.D. from Virginia Tech. Exploring agentic AI, graph reasoning, and reliable learning systems.
 ---
 
-<section class="future-hero" id="about" aria-labelledby="hero-title">
-  <div class="hero-grid">
-    <div class="hero-copy reveal" data-stagger>
-      <div class="signal-kicker"><span class="signal-dot" aria-hidden="true"></span> Open × World expedition · collaborations welcome</div>
-      <p class="hero-eyebrow">AGENTIC AI <span>/</span> GRAPH REASONING <span>/</span> SCIENTIFIC DISCOVERY</p>
-      <h1 id="hero-title">Shuaicheng <span>Zhang</span></h1>
-      <p class="hero-thesis">Building AI systems that reason over <em>structure, memory, and science.</em></p>
-      <p class="hero-intro">
-        I recently completed my Ph.D. in Computer Science at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. I am joining LinkedIn as an AI Engineer, where I will continue turning research ideas into intelligent systems at scale.
-      </p>
-
-      <div class="hero-actions" aria-label="Primary links">
-        <a class="future-button future-button-primary" href="#research">Explore my research <i class="ti ti-arrow-down-right" aria-hidden="true"></i></a>
-        <a class="future-button" href="#publications">View publications</a>
-        <button class="future-button nen-toggle" type="button" data-nen-toggle aria-pressed="false" aria-controls="hunter-license"><span class="nen-glyph" aria-hidden="true">念</span><span data-nen-toggle-label>Activate Nen</span></button>
-        <a class="future-button future-button-icon" href="mailto:zshuai8@vt.edu" aria-label="Email Shuaicheng Zhang"><i class="ti ti-mail" aria-hidden="true"></i></a>
-      </div>
-
-      <div class="hero-profile-links" aria-label="Professional profiles">
-        <span>CONNECT / DISCOVER</span>
-        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">
-          <i class="ti ti-brand-linkedin" aria-hidden="true"></i><strong>LinkedIn</strong><i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
-          <i class="ai ai-google-scholar" aria-hidden="true"></i><strong>Google Scholar</strong><i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-        </a>
-      </div>
-
-      <div class="hero-signals" aria-label="Highlights">
-        <div><span>Ph.D. · 2026</span><strong>Virginia Tech</strong></div>
-        <div><span>Next chapter</span><strong>LinkedIn AI Engineer</strong></div>
-        <div><span>2026</span><strong>TMLR + CIKM</strong></div>
-      </div>
-
-      <aside class="hunter-license" id="hunter-license" aria-label="Research Hunter license" data-tilt>
-        <div class="license-topline"><span>OPEN × WORLD KNOWLEDGE LICENSE</span><span>NO. 2026-SZ</span></div>
-        <div class="license-body">
-          <div class="license-emblem" aria-hidden="true"><span>×</span><strong>SZ</strong></div>
-          <div class="license-identity"><span>LICENSED TO EXPLORE</span><strong>Shuaicheng Zhang</strong><small>Explore × reason × discover</small></div>
-          <dl class="license-fields">
-            <div><dt>CLASS</dt><dd>Knowledge Hunter</dd></div>
-            <div><dt>AFFINITY</dt><dd>Specialist</dd></div>
-          </dl>
-        </div>
-        <div class="license-status"><span class="license-status-dot" aria-hidden="true"></span><span data-nen-state>AURA DORMANT · ACTIVATE NEN</span><i class="ti ti-sparkles" aria-hidden="true"></i></div>
-      </aside>
-    </div>
-
-    <div class="hero-visual reveal" data-tilt>
-      <div class="nen-aura" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="portrait-orbit orbit-one" aria-hidden="true"></div>
-      <div class="portrait-orbit orbit-two" aria-hidden="true"></div>
-      <div class="portrait-card">
-        <div class="portrait-scanline" aria-hidden="true"></div>
-        {% include figure.liquid loading="eager" path="/assets/img/profile-2026.png" class="hero-portrait" sizes="(min-width: 992px) 420px, 82vw" alt="Portrait of Shuaicheng Zhang" cache_bust=true %}
-        <div class="portrait-meta">
-          <span class="mono-label">CURRENT CHAPTER</span>
-          <strong>LinkedIn · AI</strong>
-        </div>
-      </div>
-      <div class="floating-chip chip-graph"><i class="ti ti-topology-star-ring-3" aria-hidden="true"></i> Graph intelligence</div>
-      <div class="floating-chip chip-agent"><i class="ti ti-sparkles" aria-hidden="true"></i> Agentic reasoning</div>
-      <div class="floating-chip chip-trust"><i class="ti ti-shield-check" aria-hidden="true"></i> Reliable AI</div>
-    </div>
-  </div>
-  <img class="character-echo echo-gon" src="{{ '/assets/img/hunter-echoes/gon-open-world.webp' | relative_url }}" alt="" aria-hidden="true" decoding="async">
-  <div class="character-caption caption-gon" aria-hidden="true"><span>01 / EXPLORE</span><strong>Chase the unknown.</strong></div>
-  <a class="scroll-cue" href="#research" aria-label="Scroll to research"><span>SCROLL TO DISCOVER</span><i class="ti ti-arrow-down" aria-hidden="true"></i></a>
-</section>
-
-<div class="expedition-marquee" aria-hidden="true">
-  <div class="expedition-marquee-track">
-    <span>OPEN × WORLD</span><i>REASON BEYOND THE KNOWN</i><span>EXPLORE × REASON × DISCOVER</span><i>INTELLIGENCE FOR THE UNCHARTED</i>
-    <span>OPEN × WORLD</span><i>REASON BEYOND THE KNOWN</i><span>EXPLORE × REASON × DISCOVER</span><i>INTELLIGENCE FOR THE UNCHARTED</i>
-  </div>
-</div>
-
-<section class="future-section research-section" id="research" aria-labelledby="research-title">
-  <div class="section-heading reveal">
-    <p class="section-index">01 / RESEARCH VECTORS</p>
-    <h2 id="research-title">Intelligence that reasons<br>across systems.</h2>
-    <p>I work across agentic systems, memory, graphs, multimodal foundations, and real-world deployment. Select a research vector to inspect the idea behind it.</p>
-  </div>
-
-  <div class="research-interface reveal" data-stagger>
-    <div class="research-node-grid" role="list" aria-label="Research areas" data-stagger>
-      <button class="research-node is-active" type="button" role="listitem" data-research-node data-index="01" data-kicker="PLANNING / TOOL USE" data-title="Agentic AI systems" data-copy="I design agents that plan, use tools, coordinate structured reasoning, and act on complex evidence rather than producing isolated predictions.">
-        <span class="node-index">01</span><i class="ti ti-sparkles" aria-hidden="true"></i><strong>Agentic AI systems</strong><small>Planning, tool use &amp; structured reasoning</small>
-      </button>
-      <button class="research-node" type="button" role="listitem" data-research-node data-index="02" data-kicker="MEMORY / CONTEXT" data-title="Memory-augmented LLMs" data-copy="I investigate long-term memory, retrieval-augmented generation, and scalable context mechanisms that help language models preserve and apply knowledge over time.">
-        <span class="node-index">02</span><i class="ti ti-database" aria-hidden="true"></i><strong>Memory-augmented LLMs</strong><small>Long-term memory, RAG &amp; scalable context</small>
-      </button>
-      <button class="research-node" type="button" role="listitem" data-research-node data-index="03" data-kicker="GRAPHS / GROUNDING" data-title="Graph-grounded reasoning" data-copy="Knowledge graphs, GraphRAG, and graph-enhanced language models provide explicit structure for reasoning over relationships, evidence, and evolving scientific knowledge.">
-        <span class="node-index">03</span><i class="ti ti-binary-tree-2" aria-hidden="true"></i><strong>Graph-grounded reasoning</strong><small>Knowledge graphs, GraphRAG &amp; graph-LLMs</small>
-      </button>
-      <button class="research-node" type="button" role="listitem" data-research-node data-index="04" data-kicker="MODALITIES / FOUNDATIONS" data-title="Multimodal foundations" data-copy="I study foundation models that connect text, graphs, time series, and other modalities so agents can reason from the full shape of real-world evidence.">
-        <span class="node-index">04</span><i class="ti ti-box-multiple" aria-hidden="true"></i><strong>Multimodal foundations</strong><small>Text, graphs, time series &amp; beyond</small>
-      </button>
-      <button class="research-node" type="button" role="listitem" data-research-node data-index="05" data-kicker="DEPLOYMENT / DISCOVERY" data-title="Real-world AI deployments" data-copy="I translate methodology into systems for predictive maintenance, finance, databases, and scientific discovery—settings where reliability, evidence, and measurable impact matter.">
-        <span class="node-index">05</span><i class="ti ti-settings-automation" aria-hidden="true"></i><strong>Real-world AI deployments</strong><small>Science, maintenance, finance &amp; databases</small>
-      </button>
-    </div>
-
-    <div class="research-console" aria-live="polite">
-      <div class="console-topbar"><span></span><span></span><span></span><code>research_vector.sys</code></div>
-      <div class="console-body">
-        <div class="console-status"><span class="status-pulse" aria-hidden="true"></span><span id="research-detail-kicker">PLANNING / TOOL USE</span></div>
-        <div class="console-number" id="research-detail-index">01</div>
-        <p class="console-prompt">CURRENT QUESTION</p>
-        <h3 id="research-detail-title">Agentic AI systems</h3>
-        <p id="research-detail-copy">I design agents that plan, use tools, coordinate structured reasoning, and act on complex evidence rather than producing isolated predictions.</p>
-        <div class="console-spectrum" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<section class="hero dark-stage" id="about" aria-labelledby="hero-title">
+  <canvas class="hero-constellation" data-constellation aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner section-shell">
+    <div class="hero-copy">
+      <p class="eyebrow hero-identity">Shuaicheng Zhang <span>Researcher &amp; AI engineer</span></p>
+      <h1 id="hero-title">Exploring an<br><em>open world.</em></h1>
+      <p class="hero-description">I build AI systems that connect<br class="desktop-break"> structure, context, and evidence.</p>
+      <p class="hero-affiliation">AI Engineer at <strong>LinkedIn.</strong><br>Ph.D. in Computer Science, <strong>Virginia Tech.</strong></p>
+      <div class="hero-actions"><a class="button button-blue" href="#publications">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link light-link" href="#research">Meet the researcher <span aria-hidden="true">↗</span></a></div>
+      <div class="profile-links" aria-label="Professional profiles">
+        <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="mailto:{{ site.data.socials.email }}">Email <span aria-hidden="true">↗</span></a>
       </div>
     </div>
-  </div>
-  <img class="character-echo echo-killua" src="{{ '/assets/img/hunter-echoes/killua-reasoning.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
-  <div class="character-caption caption-killua" aria-hidden="true"><span>02 / REASON</span><strong>Move at the speed of thought.</strong></div>
-</section>
-
-<section class="future-section journey-section" id="internship" aria-labelledby="journey-title">
-  <div class="section-heading compact reveal">
-    <p class="section-index">02 / FIELD NOTES</p>
-    <h2 id="journey-title">Research in motion.</h2>
-    <p>Five teams, five different views of how ideas become systems.</p>
-  </div>
-
-  <div class="experience-rail reveal" data-stagger>
-    <article class="experience-card" data-tilt>
-      <div class="experience-year">2026</div>
-      <img src="{{ '/assets/img/logos/ornl.png' | relative_url }}" alt="Oak Ridge National Laboratory logo" loading="lazy">
-      <div><p>RESEARCH INTERN</p><h3>Oak Ridge National Laboratory</h3><span>GraphRAG for scientific discovery · Oak Ridge, TN</span></div>
-      <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-    </article>
-    <article class="experience-card" data-tilt>
-      <div class="experience-year">2025</div>
-      <img src="{{ '/assets/img/logos/microsoft.png' | relative_url }}" alt="Microsoft Research logo" loading="lazy">
-      <div><p>RESEARCH INTERN</p><h3>Microsoft Research</h3><span>Graph neural networks for database foundation models · Redmond, WA</span></div>
-      <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-    </article>
-    <article class="experience-card" data-tilt>
-      <div class="experience-year">2023</div>
-      <img src="{{ '/assets/img/logos/ibm.png' | relative_url }}" alt="MIT-IBM Watson AI Lab logo" loading="lazy">
-      <div><p>RESEARCH INTERN</p><h3>MIT–IBM Watson AI Lab</h3><span>Deep graph generative models · Cambridge, MA</span></div>
-      <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-    </article>
-    <article class="experience-card" data-tilt>
-      <div class="experience-year">2021</div>
-      <img src="{{ '/assets/img/logos/deloitte.png' | relative_url }}" alt="Deloitte logo" loading="lazy">
-      <div><p>NLP RESEARCH INTERN</p><h3>Deloitte AI</h3><span>Natural language processing · New York, NY</span></div>
-      <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-    </article>
-    <article class="experience-card" data-tilt>
-      <div class="experience-year">2017</div>
-      <img src="{{ '/assets/img/logos/hundsun.png' | relative_url }}" alt="Hundsun Technologies logo" loading="lazy">
-      <div><p>SOFTWARE ENGINEER INTERN</p><h3>Hundsun Technologies</h3><span>Trust systems engineering · Hangzhou, China</span></div>
-      <i class="ti ti-arrow-up-right" aria-hidden="true"></i>
-    </article>
-  </div>
-</section>
-
-<section class="future-section news-section" id="news" aria-labelledby="news-title">
-  <div class="section-heading compact reveal">
-    <p class="section-index">03 / LIVE SIGNAL</p>
-    <h2 id="news-title">What’s happening now.</h2>
-  </div>
-
-  <div class="news-grid reveal" data-stagger>
-    <article class="news-feature news-cyan">
-      <div class="news-meta"><time datetime="2026-08">AUG 2026</time><span>NEW</span></div>
-      <h3>AgentPDM accepted to CIKM 2026</h3>
-      <p>Our context-driven agentic reasoning framework for predictive maintenance is heading to Rome.</p>
-      <a href="https://cikm2026.diag.uniroma1.it/">CIKM 2026 <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
-    </article>
-    <article class="news-feature news-violet">
-      <div class="news-meta"><time datetime="2026-06">JUN 2026</time><span>PUBLISHED</span></div>
-      <h3>CAPTAIN published in TMLR</h3>
-      <p>A conformal-prediction framework for reliable multi-source time-series forecasting.</p>
-      <a href="https://openreview.net/forum?id=WJjlXHo4yS">Read on OpenReview <i class="ti ti-arrow-up-right" aria-hidden="true"></i></a>
-    </article>
-    <article class="news-feature news-lime">
-      <div class="news-meta"><time datetime="2025-07">JUL 2025</time><span>BEST PAPER</span></div>
-      <h3>KDD 2025 Best Paper Award</h3>
-      <p><em>When Heterophily Meets Heterogeneity</em> won Best Paper in the Datasets &amp; Benchmarks track.</p>
-      <a href="#lin2025_h2gb">View the paper <i class="ti ti-arrow-down-right" aria-hidden="true"></i></a>
-    </article>
-  </div>
-
-  <div class="signal-timeline reveal" data-stagger>
-    <div class="timeline-row"><time datetime="2026-05">05 / 2026</time><span></span><p>Passed my final defense and officially became Dr. Shuaicheng Zhang.</p></div>
-    <div class="timeline-row"><time datetime="2026-04">04 / 2026</time><span></span><p>Presented an agentic co-design system for hypothesis generation in SNN design at the Virginia Tech SNN Group.</p></div>
-    <div class="timeline-row"><time datetime="2026-01">01 / 2026</time><span></span><p>Gave an invited talk at Microsoft Research on open-world graph learning.</p></div>
-    <div class="timeline-row"><time datetime="2026-01">01 / 2026</time><span></span><p>Started an Oak Ridge National Laboratory internship on GraphRAG for scientific discovery.</p></div>
-    <div class="timeline-row"><time datetime="2025-12">12 / 2025</time><span></span><p>Presented a NeurIPS 2025 poster in San Diego.</p></div>
-  </div>
-
-  <details class="news-archive reveal">
-    <summary><span>Open transmission archive</span><i class="ti ti-plus" aria-hidden="true"></i></summary>
-    <div class="archive-grid">
-      <p><time>09 / 2025</time> One paper accepted at NeurIPS 2025.</p>
-      <p><time>06 / 2025</time> Joined Microsoft Research to work on GNNs for database foundation models.</p>
-      <p><time>05 / 2025</time> One paper accepted at the KDD 2025 Datasets &amp; Benchmarks track.</p>
-      <p><time>05 / 2025</time> Recognized as an Excellent Reviewer (Top 25%) by KDD 2025.</p>
-      <p><time>12 / 2024</time> Outstanding Reviewer (Top 10%), KDD 2025 August Track.</p>
-      <p><time>10 / 2024</time> One paper accepted at IEEE BigData 2025.</p>
-      <p><time>07 / 2024</time> One paper accepted at KDD 2025.</p>
-      <p><time>09 / 2023</time> One paper accepted at ICAIF 2023 with an oral presentation.</p>
-      <p><time>07 / 2023</time> Presented at ICML 2023 in Honolulu.</p>
-      <p><time>05 / 2023</time> Joined the MIT–IBM Watson AI Lab for the summer.</p>
-      <p><time>05 / 2023</time> One paper accepted at ICML 2023.</p>
-      <p><time>04 / 2023</time> Received an Amazon ML Day travel grant.</p>
-      <p><time>03 / 2023</time> Selected as a CCI Cyber Innovation Scholar.</p>
-      <p><time>10 / 2022</time> Attended CIKM 2022 and received an NSF travel award.</p>
-      <p><time>06 / 2022</time> Served as Publicity Chair of the first TrustLOG workshop at CIKM.</p>
-      <p><time>04 / 2022</time> One paper accepted at Findings of NAACL 2022.</p>
-    </div>
-  </details>
-</section>
-
-<section class="future-section papers-section" id="publications" aria-labelledby="papers-title">
-  <div class="section-heading reveal">
-    <p class="section-index">04 / PUBLICATION LOG</p>
-    <h2 id="papers-title">Ideas, tested and shared.</h2>
-    <p>Research spanning graph learning, reliable forecasting, agentic reasoning, and real-world decision systems. Open any overview for the short version.</p>
-  </div>
-  <div class="publications reveal" data-stagger>
-    {% bibliography %}
-  </div>
-  <img class="character-echo echo-future-gon" src="{{ '/assets/img/hunter-echoes/future-gon-discovery.webp' | relative_url }}" alt="" aria-hidden="true" loading="lazy" decoding="async">
-  <div class="character-caption caption-future" aria-hidden="true"><span>03 / EVOLVE</span><strong>Grow beyond the closed world.</strong></div>
-</section>
-
-<section class="future-section cats-section" id="cats" aria-labelledby="cats-title">
-  <div class="section-heading compact reveal">
-    <p class="section-index">05 / OFF-DUTY MODE</p>
-    <h2 id="cats-title">Meet the real lab directors.</h2>
-    <p>Jojo and Joy specialize in comfort, supervision, and strategically timed keyboard interruptions.</p>
-  </div>
-
-  <div class="cat-grid reveal" data-stagger>
-    <figure class="cat-card cat-card-wide" data-tilt>
-      <img src="{{ '/assets/img/cats/jojo.jpg' | relative_url }}" alt="Jojo relaxing in a favorite spot" loading="lazy">
-      <figcaption><span>JOJO</span><strong>Chief Comfort Officer</strong></figcaption>
-    </figure>
-    <figure class="cat-card" data-tilt>
-      <img src="{{ '/assets/img/cats/joy.jpg' | relative_url }}" alt="Joy relaxing at home" loading="lazy">
-      <figcaption><span>JOY</span><strong>Director of Curiosity</strong></figcaption>
-    </figure>
-    <figure class="cat-card" data-tilt>
-      <img src="{{ '/assets/img/cats/1.jpg' | relative_url }}" alt="A quiet moment with one of Shuaicheng's cats" loading="lazy">
-      <figcaption><span>FIELD LOG 01</span><strong>Deep focus</strong></figcaption>
-    </figure>
-    <figure class="cat-card cat-card-wide" data-tilt>
-      <img src="{{ '/assets/img/cats/2.jpg' | relative_url }}" alt="One of Shuaicheng's cats posing at home" loading="lazy">
-      <figcaption><span>FIELD LOG 02</span><strong>System monitoring</strong></figcaption>
+    <figure class="hero-portrait">
+      <div class="portrait-halo" aria-hidden="true"></div>
+      <div class="portrait-frame">{% include cinematic-image.liquid path="/assets/img/profile-2026.png" alt="Shuaicheng Zhang" width=1122 height=1402 loading="eager" sizes="(min-width: 1600px) 390px, (min-width: 841px) 350px, 290px" %}</div>
+      <figcaption><span class="portrait-caption-line"></span><span>A little curiosity.<br>A world of possibility.</span></figcaption>
+      <span class="portrait-note" aria-hidden="true">OPEN × WORLD / 2026</span>
     </figure>
   </div>
+  <div class="hero-bottom section-shell"><span>Research. Build. Explore.</span><a href="#research">Keep exploring <span aria-hidden="true">↓</span></a></div>
 </section>
 
-<section class="future-section cv-section" id="cv" aria-labelledby="cv-title">
-  <div class="cv-command reveal" data-stagger>
-    <div>
-      <p class="section-index">06 / COMPLETE RECORD</p>
-      <h2 id="cv-title">Want the full trajectory?</h2>
-      <p>Publications, experience, service, and the details that do not fit on one screen.</p>
-    </div>
-    <div class="cv-actions">
-      <a class="future-button future-button-primary" href="{{ '/assets/pdf/cv.pdf' | relative_url }}">Open CV <i class="ti ti-file-type-pdf" aria-hidden="true"></i></a>
-      <button class="future-button" type="button" data-cv-toggle aria-expanded="false" aria-controls="cv-preview">Preview inline</button>
-    </div>
-  </div>
-  <div class="cv-preview" id="cv-preview" hidden>
-    <iframe title="Shuaicheng Zhang curriculum vitae" data-src="{{ '/assets/pdf/cv.pdf' | relative_url }}"></iframe>
-  </div>
-</section>
-
-<section class="future-section visitors-section" id="visitors" aria-labelledby="visitors-title">
-  <div class="section-heading compact reveal">
-    <p class="section-index">07 / GLOBAL SIGNAL</p>
-    <h2 id="visitors-title">A world of curious minds.</h2>
-    <p>The live visitor map is back—quietly tracing how ideas travel across borders, time zones, and research communities.</p>
-  </div>
-
-  <div class="visitor-console reveal" data-stagger data-visitor-map>
-    <div class="visitor-console-head">
-      <div class="visitor-console-title"><span class="visitor-live-dot" aria-hidden="true"></span><strong>LIVE VISITOR TELEMETRY</strong></div>
-      <div class="visitor-console-code">GEO / WORLD / ACTIVE</div>
-    </div>
-    <div class="visitor-console-grid">
-      <div class="visitor-copy">
-        <p class="mono-label">GLOBAL REACH</p>
-        <h3>Every visit adds another point to the constellation.</h3>
-        <p>This map uses the original tracker from this site, preserving its visitor history while giving it a new home in the redesigned interface.</p>
-        <div class="visitor-status"><i class="ti ti-world" aria-hidden="true"></i><span>Signals received worldwide</span></div>
+<section class="research-section section-space" id="research" aria-labelledby="research-title">
+  <div class="section-shell">
+    <div class="section-heading reveal"><p class="eyebrow">The work</p><h2 id="research-title">From better models.<br><span class="muted">To useful systems.</span></h2></div>
+    <div class="research-intro reveal"><p>My work connects agentic reasoning, graph learning, and reliable AI. I’m interested in how models use structure and context to make sense of an open, changing world.</p><p>I completed my Ph.D. at Virginia Tech, advised by Dr. Dawei Zhou at the Sanghani Center for AI and Data Analytics. At LinkedIn, I bring that research depth to modeling and systems at scale.</p></div>
+    <div class="research-explorer reveal">
+      <div class="research-options" role="group" aria-label="Explore research areas">
+        <button type="button" class="research-option is-active" data-research="agents" aria-pressed="true" aria-controls="research-detail"><span class="option-number">01</span><span>Agentic AI</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="research-option" data-research="memory" aria-pressed="false" aria-controls="research-detail"><span class="option-number">02</span><span>Memory &amp; context</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="research-option" data-research="graphs" aria-pressed="false" aria-controls="research-detail"><span class="option-number">03</span><span>Graph reasoning</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="research-option" data-research="multimodal" aria-pressed="false" aria-controls="research-detail"><span class="option-number">04</span><span>Multimodal learning</span><span aria-hidden="true">↗</span></button>
+        <button type="button" class="research-option" data-research="systems" aria-pressed="false" aria-controls="research-detail"><span class="option-number">05</span><span>Real-world systems</span><span aria-hidden="true">↗</span></button>
       </div>
-      <div class="visitor-map-shell">
-        <div class="visitor-map-loading" data-map-loading role="status">
-          <span></span>
-          <p>Connecting to global signal…</p>
-        </div>
-        <!-- MapMyVisitors Widget BEGIN -->
-        <script defer type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script>
-        <!-- MapMyVisitors Widget END -->
-        <noscript><p class="visitor-map-fallback">Enable JavaScript to view the live visitor map.</p></noscript>
+      <div class="research-detail dark-stage" id="research-detail" aria-live="polite" aria-atomic="true">
+        <div class="research-diagram" aria-hidden="true"><span class="diagram-orbit orbit-a"></span><span class="diagram-orbit orbit-b"></span><span class="diagram-orbit orbit-c"></span><span class="diagram-core">AI</span><span class="diagram-node node-a"></span><span class="diagram-node node-b"></span><span class="diagram-node node-c"></span></div>
+        <p class="eyebrow" data-research-kicker>Reasoning → action</p>
+        <h3 data-research-title>Intelligence that takes the next step.</h3>
+        <p data-research-copy>Agents that plan, use tools, and coordinate reasoning across complex evidence. Connecting model capabilities to the decisions a working system needs to make.</p>
+        <p class="research-tags" data-research-tags>Planning / Tool use / Evidence</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="end-signal reveal" aria-hidden="true"><span></span><p>END OF TRANSMISSION · LET’S BUILD SOMETHING USEFUL</p><span></span></div>
+<section class="publications-section section-space" id="publications" aria-labelledby="papers-title">
+  <div class="section-shell">
+    <div class="heading-with-link reveal"><div class="section-heading"><p class="eyebrow">Selected research</p><h2 id="papers-title">Ideas, put to the test.</h2></div><a class="text-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div>
+    <div class="featured-papers">
+      <article class="paper-feature reveal">
+        <div class="paper-feature-copy"><p class="paper-meta">TMLR 2026 <span>Published</span></p><h3>CAPTAIN<span class="paper-title-period">.</span></h3><p class="paper-deck">Forecasts with a fuller<br>picture of uncertainty.</p><p class="paper-description">A framework that models uncertainty within sources, across sources, and over time, bringing conformal prediction to multi-source time-series forecasting.</p><div class="paper-feature-links"><a href="https://openreview.net/forum?id=WJjlXHo4yS" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a><a href="https://github.com/zshuai8/2026-TMLR-CAPTAIN" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div></div>
+        <figure class="paper-figure">{% include cinematic-image.liquid path="/assets/img/publication_preview/captain-framework.png" alt="CAPTAIN framework: uncertainty across multiple sources and temporal dependencies" width=2400 height=828 %}<figcaption>Conformal-Prediction-Based Multi-Source Time-Series Forecasting</figcaption></figure>
+      </article>
+      <article class="paper-feature paper-feature-agent reveal">
+        <div class="paper-feature-copy"><p class="paper-meta">CIKM 2026 <span>Accepted</span></p><h3>AgentPDM<span class="paper-title-period">.</span></h3><p class="paper-deck">Reasoning from signals.<br>Decisions with context.</p><p class="paper-description">Context-driven agentic reasoning for predictive maintenance, connecting sensor evidence with physics and domain knowledge to produce structured diagnoses and maintenance recommendations.</p><div class="paper-feature-links"><a href="#zhang2026_agentpdm">Explore the overview <span aria-hidden="true">↓</span></a><a href="https://cikm2026.diag.uniroma1.it/" target="_blank" rel="noopener noreferrer">CIKM 2026 <span aria-hidden="true">↗</span></a></div></div>
+        <figure class="paper-figure">{% include cinematic-image.liquid path="/assets/img/publication_preview/agentpdm.png" alt="AgentPDM architecture connecting signal analysis, domain knowledge, and a decision agent" width=800 height=460 %}<figcaption>Context-Driven Agentic Reasoning for Predictive Maintenance</figcaption></figure>
+      </article>
+    </div>
+    <a class="award-note reveal" href="#lin2025_h2gb"><span class="award-symbol" aria-hidden="true">✳</span><div><p class="eyebrow">KDD 2025 · Best Paper · Datasets &amp; Benchmarks</p><p>When Heterophily Meets Heterogeneity</p></div><span aria-hidden="true">↗</span></a>
+    <details class="publication-collection reveal" id="all-publications"><summary><span>All publications <span class="summary-note">2022—2026</span></span><span class="expand-sign" aria-hidden="true">+</span></summary><div class="publication-list">{% bibliography --template bib-cinematic %}</div></details>
+  </div>
+</section>
+
+<section class="news-section dark-stage section-space" id="news" aria-labelledby="news-title">
+  <div class="section-shell">
+    <div class="section-heading reveal"><p class="eyebrow">A new chapter</p><h2 id="news-title">The latest.<br><span class="muted">And what comes next.</span></h2></div>
+    <div class="news-cards">
+      <article class="news-card reveal"><time datetime="2026-08">August 2026</time><div><span class="news-category">Research</span><h3>AgentPDM is<br>heading to CIKM.</h3><p>Our work on context-driven agentic reasoning for predictive maintenance has been accepted at CIKM 2026.</p></div><a href="#zhang2026_agentpdm" class="text-link light-link">Explore the work <span aria-hidden="true">↗</span></a></article>
+      <article class="news-card reveal"><time datetime="2026-06">June 2026</time><div><span class="news-category">Publication</span><h3>CAPTAIN.<br>Published in TMLR.</h3><p>Bringing source interactions and temporal dependence together for uncertainty-aware forecasting.</p></div><a href="https://openreview.net/forum?id=WJjlXHo4yS" class="text-link light-link" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a></article>
+      <article class="news-card reveal"><time datetime="2026-05">May 2026</time><div><span class="news-category">Milestone</span><h3>Ph.D. complete.<br>Curiosity continues.</h3><p>Passed my final defense at Virginia Tech. Grateful for the people, questions, and collaborations along the way.</p></div><a href="#internship" class="text-link light-link">The journey so far <span aria-hidden="true">↗</span></a></article>
+    </div>
+    <details class="news-history reveal"><summary>Earlier moments <span class="expand-sign" aria-hidden="true">+</span></summary><div class="history-grid">
+      <p><time>April 2026</time>Presented an agentic co-design system for hypothesis generation in SNN design at Virginia Tech.</p>
+      <p><time>January 2026</time>Gave an invited talk at Microsoft Research on open-world graph learning.</p>
+      <p><time>January 2026</time>Started an ORNL internship on GraphRAG for scientific discovery.</p>
+      <p><time>December 2025</time>Presented a NeurIPS 2025 poster in San Diego.</p>
+      <p><time>September 2025</time>One paper accepted at NeurIPS 2025.</p>
+      <p><time>July 2025</time>KDD Best Paper Award, Datasets &amp; Benchmarks track.</p>
+      <p><time>June 2025</time>Joined Microsoft Research to work on GNNs for database foundation models.</p>
+      <p><time>May 2025</time>Paper accepted at KDD Datasets &amp; Benchmarks. Recognized as an Excellent Reviewer, Top 25%.</p>
+      <p><time>December 2024</time>Outstanding Reviewer, Top 10%, KDD 2025 August Track.</p>
+      <p><time>October 2024</time>One paper accepted at IEEE BigData 2024.</p>
+      <p><time>July 2024</time>One paper accepted at KDD 2025.</p>
+      <p><time>September 2023</time>One paper accepted at ICAIF 2023 with an oral presentation.</p>
+      <p><time>July 2023</time>Presented at ICML 2023 in Honolulu.</p>
+      <p><time>May 2023</time>Joined MIT–IBM Watson AI Lab. One paper accepted at ICML.</p>
+      <p><time>April 2023</time>Received an Amazon ML Day travel grant.</p>
+      <p><time>March 2023</time>Selected as a CCI Cyber Innovation Scholar.</p>
+      <p><time>October 2022</time>Attended CIKM and received an NSF travel award.</p>
+      <p><time>June 2022</time>Served as Publicity Chair of the first TrustLOG workshop at CIKM.</p>
+      <p><time>April 2022</time>One paper accepted at Findings of NAACL.</p>
+    </div></details>
+  </div>
+</section>
+
+<section class="journey-section section-space" id="internship" aria-labelledby="journey-title">
+  <div class="section-shell journey-grid">
+    <div class="journey-heading section-heading reveal"><p class="eyebrow">The journey</p><h2 id="journey-title">Different teams.<br><span class="muted">A wider lens.</span></h2><p class="section-description">Each chapter has shaped how I think about research, collaboration, and building things that matter.</p><a class="text-link" href="#cv">View my CV <span aria-hidden="true">↗</span></a></div>
+    <div class="experience-list">
+      <article class="experience-item experience-current reveal"><span class="experience-year">Now</span><div class="experience-logo linkedin-logo" aria-hidden="true">in</div><div><h3>LinkedIn</h3><p>AI Engineer</p><span>Modeling · Intelligence at scale</span></div></article>
+      <article class="experience-item reveal"><span class="experience-year">2026</span><img class="experience-logo" src="{{ '/assets/img/logos/ornl.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Oak Ridge National Laboratory</h3><p>Research Intern</p><span>GraphRAG for scientific discovery</span></div></article>
+      <article class="experience-item reveal"><span class="experience-year">2025</span><img class="experience-logo" src="{{ '/assets/img/logos/microsoft.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Microsoft Research</h3><p>Research Intern</p><span>GNNs for database foundation models</span></div></article>
+      <article class="experience-item reveal"><span class="experience-year">2023</span><img class="experience-logo" src="{{ '/assets/img/logos/ibm.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>MIT–IBM Watson AI Lab</h3><p>Research Intern</p><span>Deep graph generative models</span></div></article>
+      <article class="experience-item reveal"><span class="experience-year">2021</span><img class="experience-logo" src="{{ '/assets/img/logos/deloitte.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Deloitte AI</h3><p>NLP Research Intern</p><span>Natural language processing</span></div></article>
+      <article class="experience-item reveal"><span class="experience-year">2017</span><img class="experience-logo" src="{{ '/assets/img/logos/hundsun.png' | relative_url }}" alt="" loading="lazy" width="64" height="64"><div><h3>Hundsun Technologies</h3><p>Software Engineer Intern</p><span>Trust systems engineering</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="hunter-section dark-stage" id="beyond" aria-labelledby="hunter-title">
+  <div class="hunter-ambient" aria-hidden="true"></div>
+  <div class="section-shell">
+    <div class="hunter-heading reveal"><p class="eyebrow">Beyond the research</p><h2 id="hunter-title">Stay curious.<br><em>Go beyond.</em></h2><p>A lifelong Hunter × Hunter fan.<br>Still exploring an <strong>Open × World</strong> of knowledge.</p><button class="button button-glass" type="button" data-nen-toggle aria-pressed="false" aria-controls="hunter-characters"><span class="nen-symbol" aria-hidden="true">念</span><span data-nen-label>Activate Nen</span></button></div>
+    <div class="hunter-characters" id="hunter-characters">
+      <figure class="hunter-character character-gon"><img src="{{ '/assets/img/hunter-echoes/gon-open-world.webp' | relative_url }}" alt="Gon Freecss surrounded by green energy" loading="lazy" width="600" height="800"><figcaption><span>01 / Curiosity</span><strong>Chase the unknown.</strong><small>Gon</small></figcaption></figure>
+      <figure class="hunter-character character-killua"><img src="{{ '/assets/img/hunter-echoes/killua-reasoning.webp' | relative_url }}" alt="Killua Zoldyck surrounded by blue electricity" loading="lazy" width="600" height="800"><figcaption><span>02 / Possibility</span><strong>Find your own path.</strong><small>Killua</small></figcaption></figure>
+      <figure class="hunter-character character-future"><img src="{{ '/assets/img/hunter-echoes/future-gon-discovery.webp' | relative_url }}" alt="Future Gon with his towering silhouette" loading="lazy" width="600" height="800"><figcaption><span>03 / Growth</span><strong>Beyond your limits.</strong><small>Future Gon</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cats-section section-space" id="cats" aria-labelledby="cats-title">
+  <div class="section-shell">
+    <div class="heading-with-link reveal"><div class="section-heading"><p class="eyebrow">A life outside the lab</p><h2 id="cats-title">My favorite collaborators.</h2><p class="section-description">Jojo and Joy. Experts in curiosity, comfort,<br>and perfectly timed keyboard interruptions.</p></div><span class="cat-footnote">No papers. Plenty of supervision.</span></div>
+    <div class="cat-gallery">
+      <figure class="cat-photo reveal">{% include cinematic-image.liquid path="/assets/img/cats/jojo.jpg" alt="Jojo relaxing at home" %}<figcaption><strong>Jojo</strong><span>Chief Comfort Officer</span></figcaption></figure>
+      <figure class="cat-photo reveal">{% include cinematic-image.liquid path="/assets/img/cats/joy.jpg" alt="Joy relaxing at home" %}<figcaption><strong>Joy</strong><span>Director of Curiosity</span></figcaption></figure>
+    </div>
+    <details class="cat-extras"><summary>A few more moments <span aria-hidden="true">+</span></summary><div class="cat-gallery"><figure class="cat-photo">{% include cinematic-image.liquid path="/assets/img/cats/1.jpg" alt="A quiet moment with one of my cats" %}<figcaption><strong>Deep focus.</strong></figcaption></figure><figure class="cat-photo">{% include cinematic-image.liquid path="/assets/img/cats/2.jpg" alt="One of my cats keeping an eye on things" %}<figcaption><strong>System monitoring.</strong></figcaption></figure></div></details>
+  </div>
+</section>
+
+<section class="visitors-section section-space" id="visitors" aria-labelledby="visitors-title">
+  <div class="section-shell visitor-grid">
+    <div class="section-heading reveal"><p class="eyebrow">Around the world</p><h2 id="visitors-title">Ideas travel.</h2><p class="section-description">A world of curious minds.<br>Thanks for stopping by, wherever you are.</p><a class="text-link" href="https://mapmyvisitors.com/web/1bygl" target="_blank" rel="noopener noreferrer">Explore the visitor map <span aria-hidden="true">↗</span></a></div>
+    <div class="visitor-map reveal" data-visitor-map><div class="map-shell"><script defer type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=oDYSsGlQS3Ozmpt9A1tmVGUazl680ppRGgpmjQVzkr8&cl=ffffff&w=a"></script><noscript><p>The live map needs JavaScript. <a href="https://mapmyvisitors.com/web/1bygl">View visitor history.</a></p></noscript></div><p class="map-caption">Our global community <span>MapMyVisitors</span></p></div>
+  </div>
+</section>
+
+<section class="contact-section dark-stage section-space" id="contact" aria-labelledby="contact-title">
+  <div class="section-shell">
+    <p class="eyebrow reveal">The next conversation</p><h2 id="contact-title" class="reveal">Good ideas start<br>with <em>a hello.</em></h2><a class="contact-email reveal" href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }} <span aria-hidden="true">↗</span></a>
+    <div class="contact-bottom reveal"><div class="profile-links"><a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a><a href="#visitors">Visitor map <span aria-hidden="true">↗</span></a></div><div id="cv" class="cv-actions"><a class="button button-glass" href="{{ '/assets/pdf/cv.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Curriculum vitae <span aria-hidden="true">↗</span></a><button class="cv-preview-toggle text-link light-link" type="button" data-cv-toggle aria-expanded="false" aria-controls="cv-preview">Preview CV</button></div></div>
+    <div id="cv-preview" class="cv-preview" hidden><iframe title="Shuaicheng Zhang curriculum vitae" data-src="{{ '/assets/pdf/cv.pdf' | relative_url }}" loading="lazy"></iframe><p><a href="{{ '/assets/pdf/cv.pdf' | relative_url }}">Open the PDF directly</a> if the preview is unavailable.</p></div>
+  </div>
+</section>

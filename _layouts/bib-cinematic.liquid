@@ -1,0 +1,60 @@
+---
+---
+<article class="publication-row" id="{{ entry.key }}">
+  <div class="publication-thumbnail">
+    {% if entry.preview -%}
+      <img
+        src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}"
+        alt="Figure from {{ entry.title | escape }}"
+        loading="lazy"
+        width="320"
+        height="200"
+      >
+    {%- endif %}
+  </div>
+  <div class="publication-content">
+    <h3>{{ entry.title }}</h3>
+    <p class="publication-authors">
+      {% for author in entry.author_array -%}
+        {%- assign clean_last = author.last | remove: '*' -%}
+        {%- if author.first == 'Shuaicheng' and clean_last == 'Zhang' -%}
+          <strong>
+            {{- author.first }}
+            {{ author.last -}}
+          </strong>
+        {%- else -%}
+          {{- author.first }}
+          {{ author.last -}}
+        {%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor %}
+    </p>
+    <p class="publication-venue">
+      {% if entry.journal %}{{ entry.journal }}{% elsif entry.booktitle %}{{ entry.booktitle }}{% endif %} · {{ entry.year -}}
+      {%- if entry.note and entry.note != 'to appear' -%}
+        <span class="paper-badge">{{ entry.note }}</span>
+      {%- endif %}
+    </p>
+    <div class="publication-links">
+      {% if entry.pdf -%}
+        <a href="{{ entry.pdf }}" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+      {% if entry.code -%}
+        <a href="{{ entry.code }}" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+      {% if entry.website -%}
+        <a href="{{ entry.website }}" target="_blank" rel="noopener noreferrer">OpenReview <span aria-hidden="true">↗</span></a>
+      {%- elsif entry.doi -%}
+        <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener noreferrer">Publication <span aria-hidden="true">↗</span></a>
+      {%- elsif entry.url and entry.url != 'tbd' -%}
+        <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>
+      {%- endif %}
+    </div>
+    {% if entry.abstract %}
+      <details class="paper-abstract">
+        <summary>Overview</summary>
+        <p>{{ entry.abstract }}</p>
+      </details>
+    {% endif %}
+  </div>
+</article>

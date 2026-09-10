@@ -1,0 +1,22 @@
+{% assign image_extension = include.path | split: '.' | last | prepend: '.' %}
+{% assign image_stem = include.path | remove: image_extension %}
+<picture>
+  {% if site.imagemagick.enabled %}
+    <source
+      type="image/webp"
+      srcset="{{ image_stem | append: '-480.webp' | relative_url }} 480w, {{ image_stem | append: '-800.webp' | relative_url }} 800w, {{ image_stem | append: '-1400.webp' | relative_url }} 1400w"
+      sizes="{{ include.sizes | default: '(min-width: 1200px) 560px, (min-width: 621px) 45vw, 90vw' }}"
+    >
+  {% endif %}
+  <img
+    src="{{ include.path | relative_url }}"
+    alt="{{ include.alt | escape }}"
+    width="{{ include.width | default: 800 }}"
+    height="{{ include.height | default: 900 }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    {% if include.loading == 'eager' %}
+      fetchpriority="high"
+    {% endif %}
+    decoding="async"
+  >
+</picture>

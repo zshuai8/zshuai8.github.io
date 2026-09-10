@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-motion="on">
+  <head>
+    {% include metadata.liquid %}
+    <meta name="google-site-verification" content="Mvt8pL1JG-bIjdZHt9ImlUypJosA_oB3OkWX-X4vi_E">
+    <meta name="theme-color" content="#080a0e">
+    <link rel="icon" href="{{ '/assets/img/logos/favicon.png' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% if site.imagemagick.enabled %}
+      <link
+        rel="preload"
+        as="image"
+        href="{{ '/assets/img/profile-2026-800.webp' | relative_url }}"
+        imagesrcset="{{ '/assets/img/profile-2026-480.webp' | relative_url }} 480w, {{ '/assets/img/profile-2026-800.webp' | relative_url }} 800w, {{ '/assets/img/profile-2026-1400.webp' | relative_url }} 1400w"
+        imagesizes="(min-width: 1600px) 390px, (min-width: 841px) 350px, 290px"
+        type="image/webp"
+      >
+    {% endif %}
+    <link rel="stylesheet" href="{{ '/assets/css/cinematic.css' | relative_url | bust_file_cache }}">
+    <script>
+      try {
+        const theme = localStorage.getItem('sz-theme');
+        if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches || localStorage.getItem('sz-motion') === 'off')
+          document.documentElement.dataset.motion = 'off';
+      } catch (_) {}
+    </script>
+    <script defer src="{{ '/assets/js/cinematic.js' | relative_url | bust_file_cache }}"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="wordmark" href="#about" aria-label="Shuaicheng Zhang, home"
+          ><span class="monogram" aria-hidden="true">sz.</span><span>Shuaicheng Zhang</span></a
+        >
+        <div class="nav-links" id="navigation">
+          <a href="#research">Research</a><a href="#publications">Publications</a><a href="#internship">Journey</a><a href="#beyond">Beyond</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <div class="nav-controls">
+          <button class="icon-button" data-theme-toggle aria-label="Switch to dark theme" title="Change theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="7.5"/><path d="M12 4.5a7.5 7.5 0 0 1 0 15Z" fill="currentColor" stroke="none"/>
+            </svg>
+          </button>
+          <button class="icon-button motion-toggle" data-motion-toggle aria-label="Pause animations" aria-pressed="false" title="Pause animations">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path class="pause-icon" d="M9 6v12M15 6v12"/><path class="play-icon" d="m9 6 9 6-9 6Z"/>
+            </svg>
+          </button>
+          <button class="icon-button menu-toggle" data-menu-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5 9h14M5 15h14"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div class="reading-progress" aria-hidden="true"></div>
+    </header>
+    <main id="main">{{ content }}</main>
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a href="#about" class="wordmark"><span class="monogram">sz.</span><span>Always curious.</span></a>
+        <p>© {{ site.time | date: '%Y' }} Shuaicheng Zhang</p>
+        <a href="#about">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
