@@ -1,0 +1,17 @@
+{% assign scene = include.scene %}
+<div class="world-background world-{{ scene.key }}" data-world-background aria-hidden="true">
+  <div class="world-landscape">
+    {% assign landscape = scene.key | prepend: '/assets/img/open-world/' | append: '.png' %}
+    {% include cinematic-image.liquid path=landscape alt="" width=1672 height=941 sizes="100vw" %}
+  </div>
+  <div class="world-character">
+    <img
+      src="{{ scene.artwork | prepend: '/assets/img/hunter-echoes/' | relative_url }}"
+      alt=""
+      width="600"
+      height="800"
+      loading="lazy"
+      decoding="async"
+    >
+  </div>
+</div>

@@ -8,7 +8,6 @@
   const menuButton = document.querySelector("[data-menu-toggle]");
   const navigation = document.querySelector(".nav-links");
   const hero = document.querySelector(".hero");
-  const portrait = document.querySelector(".hero-portrait");
   const canvas = document.querySelector("[data-constellation]");
   const context = canvas?.getContext("2d");
   let frame = 0;
@@ -85,26 +84,7 @@
     if (!event.target.closest(".site-header")) closeMenu();
   });
 
-  const revealElements = document.querySelectorAll(".reveal");
-  if (canAnimate() && "IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.remove("will-reveal");
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        });
-      },
-      { threshold: 0, rootMargin: "0px 0px -35px 0px" }
-    );
-    revealElements.forEach((el) => {
-      if (el.getBoundingClientRect().top >= window.innerHeight) {
-        el.classList.add("will-reveal");
-        revealObserver.observe(el);
-      } else el.classList.add("is-visible");
-    });
-  }
+  // Reading content is visible immediately; only decorative backgrounds drift.
 
   const research = {
     agents: {
@@ -182,7 +162,9 @@
     if (!hash || hash === "#") return;
     let target;
     try {
-      target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      const id = decodeURIComponent(hash.slice(1));
+      const formerChapters = { beyond: "research", "chapter-evidence": "publications", "chapter-impact": "internship" };
+      target = document.getElementById(formerChapters[id] || id);
     } catch (_) {
       return;
     }
@@ -208,9 +190,7 @@
         }
         target.focus({ preventScroll: true });
         const behavior = canAnimate() ? "smooth" : "auto";
-        if (target.matches("[data-story-chapter]")) {
-          window.scrollTo({ top: window.scrollY + target.getBoundingClientRect().top, behavior });
-        } else target.scrollIntoView({ behavior, block: "start" });
+        target.scrollIntoView({ behavior, block: "start" });
       });
   }
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -264,8 +244,6 @@
     scrollQueued = false;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     root.style.setProperty("--read-progress", String(maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0));
-    if (portrait)
-      portrait.style.setProperty("--portrait-shift", canAnimate() && window.innerWidth > 840 ? Math.min(window.scrollY * 0.055, 32) + "px" : "0px");
   }
   window.addEventListener(
     "scroll",
